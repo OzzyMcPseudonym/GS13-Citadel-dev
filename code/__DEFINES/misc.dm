@@ -33,39 +33,32 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 
 //Human Overlays Indexes/////////
 //LOTS OF CIT CHANGES HERE. BE CAREFUL WHEN UPSTREAM ADDS MORE LAYERS
-#define MUTATIONS_LAYER			42		//mutations. Tk headglows, cold resistance glow, etc
-#define ANTAG_LAYER 			41		//stuff for things like cultism indicators (clock cult glow, cultist red halos, whatever else new that comes up)
-#define GENITALS_BEHIND_LAYER	40		//Some genitalia needs to be behind everything, such as with taurs (Taurs use body_behind_layer
-#define BREASTS_BEHIND_LAYER	39		//GS13 Edit - Modular Clothes Layer
-#define BODY_BEHIND_LAYER		38		//certain mutantrace features (tail when looking south) that must appear behind the body parts
-#define BODYPARTS_LAYER			37		//Initially "AUGMENTS", this was repurposed to be a catch-all bodyparts flag
-#define MARKING_LAYER			36		//Matrixed body markings because clashing with snouts?
-#define BODY_ADJ_LAYER			35		//certain mutantrace features (snout, body markings) that must appear above the body parts
-#define BODY_LAYER				34		//underwear, undershirts, socks, eyes, lips(makeup)
-#define BODY_ADJ_UPPER_LAYER	33
-#define FRONT_MUTATIONS_LAYER	32		//mutations that should appear above body, body_adj and bodyparts layer (e.g. laser eyes)
-#define DAMAGE_LAYER			31		//damage indicators (cuts and burns)
-#define UNIFORM_LAYER			30
-#define ID_LAYER				29
-#define HANDS_PART_LAYER		28
-#define SHOES_LAYER				27
-#define GLOVES_LAYER			26
-#define EARS_LAYER				25
-#define GENITALS_UNDER_LAYER 	24
-#define MODULAR_BELLY_LAYER		23		//GS13 Edit - Modular Clothes Layer
-#define MODULAR_BREASTS_LAYER	22		//GS13 Edit - Modular Clothes Layer
-#define MODULAR_BUTT_LAYER		21		//GS13 Edit - Modular Clothes Layer
-#define SUIT_LAYER				20
-#define GLASSES_LAYER			19
-#define BELT_LAYER				18		//Possible make this an overlay of somethign required to wear a belt?
-#define SUIT_STORE_LAYER		17
-#define NECK_LAYER				16
-#define BACK_LAYER				15
-#define BELLY_FRONT_LAYER		14		//GS13 Edit - Modular Clothes Layer
-#define BREASTS_FRONT_LAYER		13		//GS13 Edit - Modular Clothes Layer
-#define BUTT_BEHIND_LAYER		12		//GS13 Edit - Modular Clothes Layer
-#define GENITALS_EXPOSED_LAYER	11
-#define GENITALS_FRONT_LAYER	10		//Draws some genitalia above clothes and the TAUR body if need be.
+#define MUTATIONS_LAYER			35		//mutations. Tk headglows, cold resistance glow, etc
+#define ANTAG_LAYER 			34		//stuff for things like cultism indicators (clock cult glow, cultist red halos, whatever else new that comes up)
+#define GENITALS_BEHIND_LAYER	33		//Some genitalia needs to be behind everything, such as with taurs (Taurs use body_behind_layer
+#define BODY_BEHIND_LAYER		32		//certain mutantrace features (tail when looking south) that must appear behind the body parts
+#define BODYPARTS_LAYER			31		//Initially "AUGMENTS", this was repurposed to be a catch-all bodyparts flag
+#define MARKING_LAYER			30		//Matrixed body markings because clashing with snouts?
+#define BODY_ADJ_LAYER			29		//certain mutantrace features (snout, body markings) that must appear above the body parts
+#define GENITALS_FRONT_LAYER	28		//Draws some genitalia above clothes and the TAUR body if need be.
+#define BODY_LAYER				27		//underwear, undershirts, socks, eyes, lips(makeup)
+#define BODY_ADJ_UPPER_LAYER	26
+#define FRONT_MUTATIONS_LAYER	25		//mutations that should appear above body, body_adj and bodyparts layer (e.g. laser eyes)
+#define DAMAGE_LAYER			24		//damage indicators (cuts and burns)
+#define UNIFORM_LAYER			23
+#define ID_LAYER				22
+#define HANDS_PART_LAYER		21
+#define SHOES_LAYER				20
+#define GLOVES_LAYER			19
+#define EARS_LAYER				18
+#define GENITALS_UNDER_LAYER 	17
+#define SUIT_LAYER				16
+#define GENITALS_EXPOSED_LAYER	15
+#define GLASSES_LAYER			14
+#define BELT_LAYER				13		//Possible make this an overlay of somethign required to wear a belt?
+#define SUIT_STORE_LAYER		12
+#define NECK_LAYER				11
+#define BACK_LAYER				10
 #define HAIR_LAYER				9		//TODO: make part of head layer?
 #define HORNS_LAYER				8
 #define FACEMASK_LAYER			7
@@ -75,7 +68,7 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 #define HANDS_LAYER				3
 #define BODY_FRONT_LAYER		2
 #define FIRE_LAYER				1		//If you're on fire
-#define TOTAL_LAYERS			42		//KEEP THIS UP-TO-DATE OR SHIT WILL BREAK ;_;
+#define TOTAL_LAYERS			35		//KEEP THIS UP-TO-DATE OR SHIT WILL BREAK ;_;
 
 //Human Overlay Index Shortcuts for alternate_worn_layer, layers
 //Because I *KNOW* somebody will think layer+1 means "above"
@@ -461,14 +454,14 @@ GLOBAL_LIST_INIT(pda_reskins, list(
 #define STACK_CHECK_ADJACENT "adjacent" //checks if there is an object of the result type within one tile
 
 //text files
-#define BRAIN_DAMAGE_FILE "traumas_gs.json" //GS13 Edit: Less meta memes
-#define ION_FILE "ion_laws_gs.json" //GS13 Edit: we're changing some of the things here, and removing other things
+#define BRAIN_DAMAGE_FILE "traumas.json"
+#define ION_FILE "ion_laws.json"
 #define PIRATE_NAMES_FILE "pirates.json"
 #define REDPILL_FILE "redpill.json"
 #define ARCADE_FILE "arcade.json"
 // #define BOOMER_FILE "boomer.json"
 // #define LOCATIONS_FILE "locations.json"
-// #define WANTED_FILE "wanted_message_gs.json" //GS13 Edit: ...This is commented out, but I'll swap it to ours, incase it needs to be renabled.
+// #define WANTED_FILE "wanted_message.json"
 // #define VISTA_FILE "steve.json"
 #define FLESH_SCAR_FILE "wounds/flesh_scar_desc.json"
 #define BONE_SCAR_FILE "wounds/bone_scar_desc.json"
@@ -576,7 +569,7 @@ GLOBAL_LIST_INIT(pda_reskins, list(
 #define SHOES_TIED 1
 #define SHOES_KNOTTED 2
 
-#define WANTED_FILE "wanted_message_gs.json" //GS Edit: Nanotrasen to Gato.
+#define WANTED_FILE "wanted_message.json"
 
 // Notification action types
 #define NOTIFY_JUMP "jump"
@@ -593,9 +586,7 @@ GLOBAL_LIST_INIT(pda_reskins, list(
 #define FATTENING_TYPE_MAGIC "magic"
 #define FATTENING_TYPE_VIRUS "virus"
 #define FATTENING_TYPE_NANITES "nanites"
-#define FATTENING_TYPE_ATMOS "atmos"	// yeah I'm taking the name atmos instead of gasses, because fuck you I'm not calling my pref "inflation type gas", some people will get confused, if you wanna do inflation just call it that lol
 #define FATTENING_TYPE_RADIATIONS "radiations"
 #define FATTENING_TYPE_WEIGHT_LOSS "weight_loss"
-#define FATTENING_TYPE_ALMIGHTY "almighty" //This ignores prefs, please only use this for smites and other admin controlled instances.
 
 #define FATNESS_TO_WEIGHT_RATIO 0.25

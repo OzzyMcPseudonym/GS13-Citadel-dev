@@ -7,7 +7,6 @@
 	slot 					= ORGAN_SLOT_BUTT
 	w_class 				= 3
 	size 					= 0
-	var/max_size			= 0 //GS13 Edit
 	var/size_name			= "nonexistent"
 	shape					= "Pair" //turn this into a default constant if for some inexplicable reason we get more than one butt type but I doubt it.
 	genital_flags = UPDATE_OWNER_APPEARANCE|GENITAL_UNDIES_HIDDEN
@@ -17,7 +16,7 @@
 	layer_index = BUTT_LAYER_INDEX
 
 /obj/item/organ/genital/butt/modify_size(modifier, min = -INFINITY, max = BUTT_SIZE_MAX)
-	var/new_value = clamp(size_cached + modifier, starting_size, max) //GS13 EDIT
+	var/new_value = clamp(size_cached + modifier, min, max)
 	if(new_value == size_cached)
 		return
 	prev_size = size_cached
@@ -48,8 +47,6 @@
 
 	//Reflect the size of dat ass on examine.
 	switch(round(size))
-		if(0)
-			size_name = "nonexistent" // GS13 EDIT
 		if(1)
 			size_name = "average"
 		if(2)
@@ -61,7 +58,7 @@
 		if(5)
 			size_name = pick("massive","extreme","enormous","very generous","humongous","big bubbly","dummy thicc")
 		else
-			size_name = "oversized" //GS13 edit
+			size_name = "nonexistent"
 
 	desc = "You see a [lowershape] of [size_name] asscheeks."
 
@@ -85,7 +82,5 @@
 	else
 		color = "#[D.features["butt_color"]]"
 	size = D.features["butt_size"]
-	max_size = D.features["max_butt_size"]
-	starting_size = D.features["butt_size"] // GS13 EDIT
 	prev_size = size
 	toggle_visibility(D.features["butt_visibility"], FALSE)

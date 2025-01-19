@@ -2,13 +2,12 @@
 	name = "Spawn Slaughter Demon"
 	typepath = /datum/round_event/ghost_role/slaughter
 	weight = 1 //Very rare
-	max_occurrences = 0 //GS13 - no antags, thanks
+	max_occurrences = 1
 	earliest_start = 1 HOURS
 	min_players = 20
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a slaughter demon, to hunt by travelling through pools of blood."
 
-/*
 /datum/round_event_control/slaughter/canSpawnEvent()
 	weight = initial(src.weight)
 	var/list/allowed_turf_typecache = typecacheof(/turf/open) - typecacheof(/turf/open/space)
@@ -25,7 +24,6 @@
 		weight += 0.03
 		CHECK_TICK
 	return ..()
-*/
 
 /datum/round_event/ghost_role/slaughter
 	minimum_required = 1

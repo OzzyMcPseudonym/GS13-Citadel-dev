@@ -14,7 +14,6 @@
 
 	var/holding = user.get_active_held_item()
 	var/datum/progressbar/progbar
-	var/is_food_gripper = istype(user.get_active_held_item(), /obj/item/gripper/food) //GS13 EDIT
 	if (progress)
 		progbar = new(user, time, target)
 
@@ -35,8 +34,7 @@
 			|| (!(timed_action_flags & IGNORE_TARGET_IN_DOAFTERS) && !(target in user.do_afters)) \
 			|| (!(timed_action_flags & IGNORE_USER_LOC_CHANGE) && !drifting && user.loc != user_loc) \
 			|| (!(timed_action_flags & IGNORE_TARGET_LOC_CHANGE) && target.loc != target_loc) \
-			//GS13 EDIT
-			|| (!(timed_action_flags & IGNORE_HELD_ITEM) && !is_food_gripper && user.get_active_held_item() != holding) \
+			|| (!(timed_action_flags & IGNORE_HELD_ITEM) && user.get_active_held_item() != holding) \
 			|| (!(timed_action_flags & IGNORE_INCAPACITATED) && user.incapacitated()) \
 			|| (extra_checks && !extra_checks.Invoke()) \
 			)

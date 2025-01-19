@@ -109,7 +109,6 @@
 #define RCD_AIRLOCK 2
 #define RCD_DECONSTRUCT 3
 #define RCD_WINDOWGRILLE 4
-#define RCD_GIRDER 5 //gs13 - rcd girder option
 #define RCD_MACHINE 8
 #define RCD_COMPUTER 16
 

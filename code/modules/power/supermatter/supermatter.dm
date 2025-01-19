@@ -602,7 +602,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	//Varies based on power and gas content
 	removed.adjust_moles(GAS_PLASMA, clamp((device_energy * dynamic_heat_modifier) / PLASMA_RELEASE_MODIFIER, 0, 50))
 	//Varies based on power, gas content, and heat
-	removed.adjust_moles(GAS_O2, clamp((device_energy * dynamic_heat_modifier + effective_temperature - T20C) / OXYGEN_RELEASE_MODIFIER, 0, 100))
+	removed.adjust_moles(GAS_O2, clamp((device_energy * dynamic_heat_modifier + effective_temperature - T0C) / OXYGEN_RELEASE_MODIFIER, 0, 100))
 
 	if(removed.return_temperature() < max_temp_increase)
 		removed.adjust_heat(device_energy * dynamic_heat_modifier * THERMAL_RELEASE_MODIFIER)
@@ -965,7 +965,6 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	name = "supermatter shard"
 	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure."
 	base_icon_state = "darkmatter_shard"
-	icon = 'GainStation13/icons/turf/supermatter.dmi' // GS13 EDIT 'icons/obj/supermatter.dmi'
 	icon_state = "darkmatter_shard"
 	anchored = FALSE
 	gasefficency = 0.125

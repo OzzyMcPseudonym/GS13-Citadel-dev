@@ -107,11 +107,6 @@
 	if(wear_id)
 		. += "[t_He] [t_is] wearing [wear_id.get_examine_string(user)]."
 
-	//GS13 Port
-	//Heat Detection
-	//if(breedable)
-	if(HAS_TRAIT(src, TRAIT_HEAT))
-		. += "<span class='love'>[t_He] [t_is] currently in heat.</span>"
 	//Status effects
 	var/effects_exam = status_effect_examines()
 	if(!isnull(effects_exam))
@@ -398,11 +393,11 @@
 	//GS13 EDIT FAT EXAMINE
 	switch(fullness)
 		if(FULLNESS_LEVEL_BLOATED to FULLNESS_LEVEL_BEEG)
-			. += span_warning("[t_He] look[p_s()] like [t_He] ate a bit too much.\n")
+			. += "[t_He] look[p_s()] like [t_He] ate a bit too much.\n"
 		if(FULLNESS_LEVEL_BEEG to FULLNESS_LEVEL_NOMOREPLZ)
-			. += span_warning("[t_His] stomach looks very round and very full.\n")
+			. += "[t_His] stomach looks very round and very full.\n"
 		if(FULLNESS_LEVEL_NOMOREPLZ to INFINITY)
-			. += span_boldwarning("[t_His] stomach has been stretched to enormous proportions.\n")
+			. += "[t_His] stomach has been stretched to enormous proportions.\n"
 
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
 		. += "[t_He] [t_is] severely malnourished.\n"
@@ -434,8 +429,6 @@
 	//GS13 EDIT START
 	if(client?.prefs?.noncon_weight_gain)
 		. += "\n<span class='purple'><b>Non-con fattening is allowed</b></span>\n"
-	if(client?.prefs?.trouble_seeker)
-		. += "<span class='purple'><b>[t_He] seems to want to be confronted.</b></span>\n"
 	//GS13 EDIT END
 
 	var/trait_exam = common_trait_examine()

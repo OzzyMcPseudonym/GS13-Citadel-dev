@@ -8,8 +8,8 @@
 	products = list(/obj/item/clothing/head/that = 4,
 					/obj/item/clothing/head/fedora = 3,
 					//GS13 EDIT START
-					/obj/item/clothing/under/color/grey = 20,
 		            /obj/item/clothing/suit/jacket/letterman_gato = 5,
+					/obj/item/clothing/under/color/grey/modular = 6,
 					//GS13 EDIT END
 					/obj/item/clothing/head/beret = 3,
 					/obj/item/clothing/head/beret/black = 3,
@@ -228,6 +228,7 @@
 					/obj/item/clothing/under/costume/basil_boys = 20,
 					/obj/item/clothing/head/basil_boys = 20,
 					/obj/item/clothing/shoes/basil_boys = 20,
+					/* Commenting out until next Christmas or made automatic
 					/obj/item/clothing/accessory/sweater/uglyxmas = 3,
 					/obj/item/clothing/under/costume/christmas = 3,
 					/obj/item/clothing/under/costume/christmas/green = 3,
@@ -241,6 +242,7 @@
 					/obj/item/clothing/shoes/winterboots/christmasbootsr = 3,
 					/obj/item/clothing/shoes/winterboots/christmasbootsg = 3,
 					/obj/item/clothing/shoes/winterboots/santaboots = 3,
+					*/
 					/obj/item/clothing/head/cowboyhat = 3,
 					/obj/item/clothing/head/cowboyhat/black = 3,
 					/obj/item/clothing/head/cowboyhat/white = 3,
@@ -267,7 +269,6 @@
 					/obj/item/clothing/suit/vapeshirt = 2,
 					/obj/item/clothing/under/costume/geisha = 4,
 					/obj/item/clothing/under/misc/keyholesweater = 3,
-					/obj/item/clothing/suit/space/hardsuit/engine/haydee = 1, //GS13
 					/obj/item/clothing/under/misc/staffassistant = 5)
 	premium = list(/obj/item/clothing/under/suit/checkered = 4,
 					/obj/item/clothing/head/mailman = 2,

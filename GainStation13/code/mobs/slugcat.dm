@@ -33,7 +33,9 @@
 	var/held_icon = "slugcat"
 	do_footstep = TRUE
 	//lizard food
-	vore_flags = DEVOURABLE | DIGESTABLE | FEEDING
+	devourable = 1
+	digestable = 1
+	feeding = 1
 	var/obj/item/spear/weapon
 
 /mob/living/simple_animal/pet/slugcat/Initialize(mapload)

@@ -660,57 +660,6 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	wave_explosion_block = EXPLOSION_BLOCK_EXTREME
 	wave_explosion_multiply = EXPLOSION_BLOCK_EXTREME
 	glass_type = /obj/item/stack/sheet/plasmarglass
-	canSmoothWith = list(
-	/turf/closed/wall,
-	/turf/closed/wall/r_wall,
-	/obj/structure/falsewall,
-	/obj/structure/falsewall/brass,
-	/obj/structure/falsewall/reinforced,
-	/turf/closed/wall/rust,
-	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
-	/turf/closed/wall/clockwork,
-	/turf/closed/indestructible/riveted/,
-	/turf/closed/indestructible/riveted/uranium,
-	/obj/structure/window/fulltile,
-	/obj/structure/window/reinforced/fulltile,
-	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
-	/obj/machinery/door,
-	/obj/machinery/door/airlock/,
-	/obj/machinery/door/airlock/mining,
-	/obj/machinery/door/airlock/mining/glass,
-	/obj/machinery/door/airlock/medical,
-	/obj/machinery/door/airlock/medical/glass,
-	/obj/machinery/door/airlock/public,
-	/obj/machinery/door/airlock/public/glass,
-	/obj/machinery/door/airlock/research,
-	/obj/machinery/door/airlock/research/glass,
-	/obj/machinery/door/airlock/maintenance,
-	/obj/machinery/door/airlock/maintenance/glass,
-	/obj/machinery/door/airlock/command/,
-	/obj/machinery/door/airlock/command/glass,
-	/obj/machinery/door/airlock/engineering,
-	/obj/machinery/door/airlock/engineering/glass,
-	/obj/machinery/door/airlock/engineering/abandoned,
-	/obj/machinery/door/airlock/security,
-	/obj/machinery/door/airlock/security/glass,
-	/obj/machinery/door/airlock/maintenance/abandoned,
-	/obj/machinery/door/poddoor/shutters/preopen,
-	/obj/machinery/door/poddoor/shutters,
-	/obj/machinery/door/window/eastright,
-	/obj/machinery/door/window/eastleft,
-	/obj/machinery/door/window/northleft,
-	/obj/machinery/door/window/northright,
-	/obj/machinery/door/airlock/external,
-	/obj/machinery/door/airlock,
-	/obj/machinery/door/airlock/hatch,
-	/obj/machinery/door/airlock/engineering/glass/critical,
-	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
-
 
 /obj/structure/window/plasma/reinforced/spawner/east
 	dir = EAST
@@ -754,16 +703,12 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/structure/falsewall/reinforced,
 	/turf/closed/wall/rust,
 	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
 	/turf/closed/wall/clockwork,
 	/turf/closed/indestructible/riveted/,
 	/turf/closed/indestructible/riveted/uranium,
 	/obj/structure/window/fulltile,
 	/obj/structure/window/reinforced/fulltile,
 	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
 	/obj/machinery/door,
 	/obj/machinery/door/airlock/,
 	/obj/machinery/door/airlock/mining,
@@ -795,7 +740,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/machinery/door/airlock/hatch,
 	/obj/machinery/door/airlock/engineering/glass/critical,
 	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
+	/obj/machinery/door/airlock/highsecurity,)
 
 	glass_amount = 2
 
@@ -819,16 +764,12 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/structure/falsewall/reinforced,
 	/turf/closed/wall/rust,
 	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
 	/turf/closed/wall/clockwork,
 	/turf/closed/indestructible/riveted/,
 	/turf/closed/indestructible/riveted/uranium,
 	/obj/structure/window/fulltile,
 	/obj/structure/window/reinforced/fulltile,
 	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
 	/obj/machinery/door,
 	/obj/machinery/door/airlock/,
 	/obj/machinery/door/airlock/mining,
@@ -860,7 +801,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/machinery/door/airlock/hatch,
 	/obj/machinery/door/airlock/engineering/glass/critical,
 	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
+	/obj/machinery/door/airlock/highsecurity,)
 
 	glass_amount = 2
 
@@ -876,57 +817,6 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smooth = SMOOTH_TRUE
 	glass_amount = 2
-	canSmoothWith = list(
-	/turf/closed/wall,
-	/turf/closed/wall/r_wall,
-	/obj/structure/falsewall,
-	/obj/structure/falsewall/brass,
-	/obj/structure/falsewall/reinforced,
-	/turf/closed/wall/rust,
-	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
-	/turf/closed/wall/clockwork,
-	/turf/closed/indestructible/riveted/,
-	/turf/closed/indestructible/riveted/uranium,
-	/obj/structure/window/fulltile,
-	/obj/structure/window/reinforced/fulltile,
-	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
-	/obj/machinery/door,
-	/obj/machinery/door/airlock/,
-	/obj/machinery/door/airlock/mining,
-	/obj/machinery/door/airlock/mining/glass,
-	/obj/machinery/door/airlock/medical,
-	/obj/machinery/door/airlock/medical/glass,
-	/obj/machinery/door/airlock/public,
-	/obj/machinery/door/airlock/public/glass,
-	/obj/machinery/door/airlock/research,
-	/obj/machinery/door/airlock/research/glass,
-	/obj/machinery/door/airlock/maintenance,
-	/obj/machinery/door/airlock/maintenance/glass,
-	/obj/machinery/door/airlock/command/,
-	/obj/machinery/door/airlock/command/glass,
-	/obj/machinery/door/airlock/engineering,
-	/obj/machinery/door/airlock/engineering/glass,
-	/obj/machinery/door/airlock/engineering/abandoned,
-	/obj/machinery/door/airlock/security,
-	/obj/machinery/door/airlock/security/glass,
-	/obj/machinery/door/airlock/maintenance/abandoned,
-	/obj/machinery/door/poddoor/shutters/preopen,
-	/obj/machinery/door/poddoor/shutters,
-	/obj/machinery/door/window/eastright,
-	/obj/machinery/door/window/eastleft,
-	/obj/machinery/door/window/northleft,
-	/obj/machinery/door/window/northright,
-	/obj/machinery/door/airlock/external,
-	/obj/machinery/door/airlock,
-	/obj/machinery/door/airlock/hatch,
-	/obj/machinery/door/airlock/engineering/glass/critical,
-	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
-
 
 /obj/structure/window/plasma/reinforced/fulltile/unanchored
 	anchored = FALSE
@@ -948,16 +838,12 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/structure/falsewall/reinforced,
 	/turf/closed/wall/rust,
 	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
 	/turf/closed/wall/clockwork,
 	/turf/closed/indestructible/riveted/,
 	/turf/closed/indestructible/riveted/uranium,
 	/obj/structure/window/fulltile,
 	/obj/structure/window/reinforced/fulltile,
 	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
 	/obj/machinery/door,
 	/obj/machinery/door/airlock/,
 	/obj/machinery/door/airlock/mining,
@@ -989,7 +875,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/machinery/door/airlock/hatch,
 	/obj/machinery/door/airlock/engineering/glass/critical,
 	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
+	/obj/machinery/door/airlock/highsecurity,)
 
 	level = 3
 	glass_amount = 2
@@ -1013,16 +899,12 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/structure/falsewall/reinforced,
 	/turf/closed/wall/rust,
 	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
 	/turf/closed/wall/clockwork,
 	/turf/closed/indestructible/riveted/,
 	/turf/closed/indestructible/riveted/uranium,
 	/obj/structure/window/fulltile,
 	/obj/structure/window/reinforced/fulltile,
 	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
 	/obj/machinery/door,
 	/obj/machinery/door/airlock/,
 	/obj/machinery/door/airlock/mining,
@@ -1054,7 +936,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/machinery/door/airlock/hatch,
 	/obj/machinery/door/airlock/engineering/glass/critical,
 	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
+	/obj/machinery/door/airlock/highsecurity,)
 
 	level = 3
 	glass_amount = 2
@@ -1072,16 +954,12 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/structure/falsewall/reinforced,
 	/turf/closed/wall/rust,
 	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
 	/turf/closed/wall/clockwork,
 	/turf/closed/indestructible/riveted/,
 	/turf/closed/indestructible/riveted/uranium,
 	/obj/structure/window/fulltile,
 	/obj/structure/window/reinforced/fulltile,
 	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
 	/obj/machinery/door,
 	/obj/machinery/door/airlock/,
 	/obj/machinery/door/airlock/mining,
@@ -1113,7 +991,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	/obj/machinery/door/airlock/hatch,
 	/obj/machinery/door/airlock/engineering/glass/critical,
 	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
+	/obj/machinery/door/airlock/highsecurity,)
 
 	level = 3
 	glass_amount = 2
@@ -1168,57 +1046,6 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	level = 3
 	glass_type = /obj/item/stack/sheet/plastitaniumglass
 	glass_amount = 2
-	canSmoothWith = list(
-	/turf/closed/wall,
-	/turf/closed/wall/r_wall,
-	/obj/structure/falsewall,
-	/obj/structure/falsewall/brass,
-	/obj/structure/falsewall/reinforced,
-	/turf/closed/wall/rust,
-	/turf/closed/wall/r_wall/rust,
-	/turf/closed/indestructible/riveted,
-	/turf/closed/wall/clockwork,
-	/turf/closed/indestructible/riveted/,
-	/turf/closed/indestructible/riveted/uranium,
-	/obj/structure/window/fulltile,
-	/obj/structure/window/reinforced/fulltile,
-	/obj/structure/window/reinforced/tinted/fulltile,
-	/obj/structure/window/plasma/reinforced/fulltile,
-	/obj/structure/window/plasma/fulltile,
-	/obj/structure/window/plasma,
-	/obj/machinery/door,
-	/obj/structure/window/plastitanium,
-	/obj/machinery/door/airlock/,
-	/obj/machinery/door/airlock/mining,
-	/obj/machinery/door/airlock/mining/glass,
-	/obj/machinery/door/airlock/medical,
-	/obj/machinery/door/airlock/medical/glass,
-	/obj/machinery/door/airlock/public,
-	/obj/machinery/door/airlock/public/glass,
-	/obj/machinery/door/airlock/research,
-	/obj/machinery/door/airlock/research/glass,
-	/obj/machinery/door/airlock/maintenance,
-	/obj/machinery/door/airlock/maintenance/glass,
-	/obj/machinery/door/airlock/command/,
-	/obj/machinery/door/airlock/command/glass,
-	/obj/machinery/door/airlock/engineering,
-	/obj/machinery/door/airlock/engineering/glass,
-	/obj/machinery/door/airlock/engineering/abandoned,
-	/obj/machinery/door/airlock/security,
-	/obj/machinery/door/airlock/security/glass,
-	/obj/machinery/door/airlock/maintenance/abandoned,
-	/obj/machinery/door/poddoor/shutters/preopen,
-	/obj/machinery/door/poddoor/shutters,
-	/obj/machinery/door/window/eastright,
-	/obj/machinery/door/window/eastleft,
-	/obj/machinery/door/window/northleft,
-	/obj/machinery/door/window/northright,
-	/obj/machinery/door/airlock/external,
-	/obj/machinery/door/airlock,
-	/obj/machinery/door/airlock/hatch,
-	/obj/machinery/door/airlock/engineering/glass/critical,
-	/obj/machinery/door/airlock/atmos,
-	/obj/machinery/door/airlock/highsecurity,) //GS13 - directional wall sprites will smooth with windows/airlocks
 
 /obj/structure/window/plastitanium/unanchored
 	anchored = FALSE

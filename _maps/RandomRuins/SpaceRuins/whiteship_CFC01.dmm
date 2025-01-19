@@ -95,7 +95,18 @@
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/docking_port/mobile{
-	dir = 2
+	callTime = 250;
+	can_move_docking_ports = 1;
+	dheight = 0;
+	dir = 2;
+	dwidth = 11;
+	height = 17;
+	launch_status = 0;
+	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
+	name = "Salvage Ship";
+	port_direction = 8;
+	preferred_direction = 4;
+	width = 33
 	},
 /turf/open/floor/mineral/basaltstone_floor,
 /area/shuttle/abandoned/crew{
@@ -125,10 +136,14 @@
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "ak" = (
+/obj/structure/sign/poster/contraband/communist_state{
+	pixel_y = -32
+	},
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
+/obj/item/kirbyplants/random,
 /obj/effect/turf_decal/stripes/corner,
 /obj/machinery/power/apc{
 	name = "Food Hall APC";
@@ -180,14 +195,20 @@
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "aq" = (
-/obj/structure/sign/barsign{
-	req_access = null;
-	req_access_txt = "0";
-	name = "Restaurant Sign"
+/obj/effect/decal/cleanable/dirt{
+	desc = "A thin layer of dust coating the floor.";
+	name = "dust"
 	},
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/abandoned/cargo{
-	name = "Food Hall";
+/obj/effect/turf_decal/bot_white,
+/obj/machinery/door/poddoor{
+	id = "whiteship_starboard"
+	},
+/obj/structure/fans/tiny,
+/obj/structure/fans/tiny,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plating,
+/area/shuttle/abandoned/bar{
+	name = "Kitchen";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "ar" = (
@@ -327,7 +348,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/computer/arcade/orion_trail,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/cargo{
 	name = "Food Hall";
@@ -485,6 +505,9 @@
 	})
 "aO" = (
 /obj/effect/turf_decal/bot,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /obj/structure/reagent_dispensers/fueltank,
 /obj/item/clothing/head/welding{
 	pixel_x = -2;
@@ -719,7 +742,10 @@
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "bc" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/obj/item/kirbyplants/random{
+	pixel_y = 12
+	},
+/turf/open/floor/mineral/basaltstone_floor,
 /area/shuttle/abandoned/crew{
 	name = "Arrival Hallway";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
@@ -766,10 +792,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/machinery/vending/snack/random{
-	extended_inventory = 1;
-	free = 1
-	},
+/obj/machinery/vending/coffee,
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo{
 	name = "Food Hall";
@@ -785,7 +808,10 @@
 	name = "Window Blast Door Control";
 	pixel_y = -24
 	},
-/obj/machinery/vending/mealdor,
+/obj/machinery/vending/snack/random{
+	extended_inventory = 1;
+	free = 1
+	},
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo{
 	name = "Food Hall";
@@ -847,9 +873,6 @@
 	pixel_y = -32
 	},
 /obj/structure/window/reinforced/tinted{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/open/floor/plasteel/freezer,
@@ -985,6 +1008,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
+/obj/item/kirbyplants/random,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo{
@@ -1019,11 +1043,11 @@
 	dir = 4
 	},
 /obj/vehicle/ridden/grocery_cart,
-/obj/structure/sign/poster/contraband/shamblers_juice{
-	pixel_y = -32
-	},
 /obj/machinery/light/small{
 	pixel_x = 16
+	},
+/obj/structure/sign/poster/contraband/shamblers_juice{
+	pixel_y = -32
 	},
 /turf/open/floor/plasteel/checker,
 /area/shuttle/abandoned/crew{
@@ -1139,7 +1163,7 @@
 	})
 "bQ" = (
 /obj/structure/sign/poster/contraband/chefpropaganda,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
@@ -1224,9 +1248,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 5
 	},
-/obj/structure/scale{
-	name = "discount counter"
-	},
+/obj/structure/scale,
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo{
 	name = "Food Hall";
@@ -1236,7 +1258,7 @@
 /obj/structure/sign/warning/docking{
 	name = "\improper KEEP CLEAR: BLAST DOORS"
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
@@ -1396,6 +1418,10 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger{
+	pixel_x = -14
+	},
 /obj/machinery/airalarm/all_access{
 	pixel_y = 24
 	},
@@ -1412,13 +1438,16 @@
 	pixel_y = -5;
 	pixel_x = 5
 	},
+/obj/item/paper{
+	pixel_x = -7;
+	pixel_y = 3;
+	name = "Radio Network Manual";
+	info = "<B>RADIO NETWORK MANUAL</B><BR><BR><BR>Every order intercom is set on 145.3 frequency by default. There are 6 of them, 0-5. It is recommended that you familiarize yourself with the layout of these tables for more efficient ship operation.<BR><BR>The general radio broadcast channel is for communicating with nearby crafts and stations. May be used for advertising purposes. It is recommended to temporary mute the order receiver intercom when preparing for general broadcast, as orders may interrupt your transmission."
+	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/stripes{
 	icon_state = "trim";
 	dir = 5
-	},
-/obj/machinery/computer/shuttle/white_ship{
-	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/bridge{
@@ -1466,6 +1495,10 @@
 	},
 /obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/stock_parts/cell/high{
+	pixel_y = 9;
+	pixel_x = 4
+	},
 /obj/structure/cable,
 /obj/item/circuitboard/machine/chem_dispenser{
 	pixel_x = -7;
@@ -1477,15 +1510,15 @@
 	pixel_x = 24
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high/plus,
 /obj/item/radio/off{
 	pixel_x = 10;
 	pixel_y = 0;
 	name = "radio"
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine{
@@ -1584,10 +1617,9 @@
 	name = "drain";
 	dir = 1
 	},
-/obj/machinery/door/window/westright{
+/obj/machinery/door/window/westleft{
 	dir = 2;
-	name = "Drinks Access";
-	icon_state = "left"
+	name = "Drinks Access"
 	},
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/bar{
@@ -1600,8 +1632,7 @@
 	dir = 4
 	},
 /obj/machinery/door/window/westright{
-	dir = 2;
-	name = "Drinks Access"
+	dir = 2
 	},
 /obj/machinery/chem_dispenser/drinks/fullupgrade{
 	dir = 8
@@ -1776,12 +1807,10 @@
 	name = "paper - printed note";
 	info = "<B>Hello lucky soul!</B><BR><BR>I'm Cynthia! More precisely, one of the Autonomous Spacefearring Nutrision Distribution Centers (A.S.N.D.)! One of the Cynthia Fitness Corporation most advanced public assets! I don't have much time, so I'll make it quick! I got hit by a solar flare, lost contact with CFC, and soon being offline from hivemind will trigger my termination protocols as I no longer be the Cynthia!<BR><BR>I'm asking for one thing! Please, continue my mission! Bring 'healthy' yummies to whoever wants (or needs, by your judgment)! CFC will be grateful for your service! Make me proud of you, random explorer!<BR><BR><BR><BR>((PS. Remember my company policy! Clients with BMI equal or higher than 35 gets at least triple servings!))"
 	},
-/obj/machinery/computer/camera_advanced/shuttle_docker/whiteship{
-	designate_time = 100;
+/obj/machinery/computer/shuttle/white_ship{
 	dir = 8;
-	view_range = 14;
-	x_offset = -4;
-	y_offset = -8
+	name = "A.S.N.D. Console";
+	desc = "Used to control the A.S.N.D. Ship."
 	},
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/bridge{
@@ -2122,8 +2151,11 @@
 /obj/machinery/light{
 	light_color = "#cee5d2"
 	},
+/obj/machinery/chem_master/condimaster{
+	name = "CondiMaster Neo";
+	pixel_x = -4
+	},
 /obj/effect/turf_decal/bot_white,
-/obj/machinery/chem_master/condimaster,
 /turf/open/floor/plasteel/cafeteria,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
@@ -2239,6 +2271,11 @@
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "cY" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	external_pressure_bound = 140;
+	name = "server vent";
+	pressure_checks = 0
+	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
@@ -2246,7 +2283,6 @@
 	icon_state = "manifold-1";
 	dir = 4
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine{
 	name = "Engineering";
@@ -2385,7 +2421,6 @@
 /obj/structure/window/reinforced,
 /obj/machinery/deepfryer,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/tinted,
 /turf/open/floor/plasteel/cafeteria,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
@@ -2434,7 +2469,6 @@
 /obj/item/reagent_containers/food/condiment/milk,
 /obj/item/reagent_containers/food/condiment/milk,
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/structure/window/reinforced/tinted,
 /turf/open/floor/plasteel/cafeteria,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
@@ -2516,7 +2550,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -2907,6 +2941,9 @@
 "dN" = (
 /obj/effect/turf_decal/bot_white,
 /obj/structure/window/reinforced,
+/obj/machinery/door/window/brigdoor/westleft{
+	name = "Pete Containment Unit"
+	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -2915,12 +2952,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 1
-	},
-/obj/machinery/door/window/brigdoor/westleft{
-	name = "Pete Containment Unit"
 	},
 /turf/open/floor/plasteel/freezer,
 /area/shuttle/abandoned/bar{
@@ -3007,7 +3038,6 @@
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced,
 /obj/item/reagent_containers/glass/beaker/large,
-/obj/structure/window/reinforced/tinted,
 /turf/open/floor/plasteel/cafeteria,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
@@ -3225,6 +3255,7 @@
 	id = "whiteship_starboard"
 	},
 /obj/structure/fans/tiny,
+/obj/structure/fans/tiny,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/bar{
@@ -3379,9 +3410,38 @@
 	name = "Kitchen";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
+"mR" = (
+/obj/structure/window/reinforced,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/vending/cola/blue,
+/turf/open/floor/plasteel,
+/area/shuttle/abandoned/cargo{
+	name = "Food Hall";
+	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
+	})
 "nM" = (
 /obj/structure/sign/poster/contraband/space_up,
 /turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/cargo{
+	name = "Food Hall";
+	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
+	})
+"nT" = (
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/structure/sign/barsign{
+	pixel_y = 32;
+	req_access = null;
+	req_access_txt = "0";
+	name = "Restaurant Sign"
+	},
+/turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo{
 	name = "Food Hall";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
@@ -3469,15 +3529,20 @@
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "qY" = (
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/machinery/vending/mealdor,
 /obj/structure/sign/poster/contraband/eat{
 	pixel_x = 32
 	},
 /obj/machinery/airalarm/all_access{
 	pixel_y = 24
 	},
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/abandoned/crew{
-	name = "Arrival Hallway";
+/turf/open/floor/plasteel,
+/area/shuttle/abandoned/cargo{
+	name = "Food Hall";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "rT" = (
@@ -3667,6 +3732,9 @@
 	})
 "zn" = (
 /obj/effect/turf_decal/bot,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /obj/effect/spawner/lootdrop/keg,
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine{
@@ -3756,12 +3824,6 @@
 /turf/open/floor/plasteel/freezer,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
-	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
-	})
-"Cv" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/shuttle/abandoned/cargo{
-	name = "Food Hall";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
 "DK" = (
@@ -3861,7 +3923,6 @@
 	pixel_y = -28;
 	listening = 0
 	},
-/obj/structure/table/wood,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/cargo{
 	name = "Food Hall";
@@ -4021,12 +4082,6 @@
 	name = "Engineering";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
 	})
-"Sc" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/shuttle/abandoned/engine{
-	name = "Engineering";
-	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
-	})
 "Su" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
@@ -4041,12 +4096,6 @@
 	},
 /obj/item/storage/bag/tray,
 /turf/open/floor/plasteel,
-/area/shuttle/abandoned/bar{
-	name = "Kitchen";
-	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
-	})
-"Ts" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
 	ambientsounds = list('sound/ambience/ambinice.ogg','sound/ambience/ambigen1.ogg','sound/ambience/ambigen3.ogg','sound/ambience/ambigen4.ogg','sound/ambience/ambigen5.ogg','sound/ambience/ambigen6.ogg','sound/ambience/ambigen7.ogg','sound/ambience/ambigen8.ogg','sound/ambience/ambigen9.ogg','sound/ambience/ambigen10.ogg','sound/ambience/ambigen11.ogg','sound/ambience/ambigen12.ogg','sound/ambience/ambigen14.ogg','sound/ambience/ambigen15.ogg')
@@ -4200,9 +4249,6 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /turf/open/floor/plasteel/freezer,
 /area/shuttle/abandoned/bar{
 	name = "Kitchen";
@@ -4288,7 +4334,7 @@ aG
 aG
 aG
 aG
-Sc
+dW
 kr
 kr
 kr
@@ -4364,13 +4410,13 @@ hK
 aC
 aP
 bj
-Cv
 aG
 aG
+aG
 an
 an
 an
-Sc
+dW
 xu
 ds
 dK
@@ -4408,8 +4454,8 @@ bT
 tC
 cz
 Hb
-Sc
-Sc
+dW
+dW
 RP
 Yw
 bq
@@ -4470,7 +4516,7 @@ an
 dv
 AV
 dZ
-ei
+aq
 "}
 (12,1,1) = {"
 ae
@@ -4508,7 +4554,7 @@ an
 BE
 dM
 ea
-Ts
+an
 "}
 (14,1,1) = {"
 af
@@ -4535,8 +4581,8 @@ cU
 bn
 aV
 aK
-aq
-bP
+aG
+nT
 bZ
 cn
 cz
@@ -4554,7 +4600,7 @@ aj
 aj
 aj
 aj
-Cv
+aG
 fs
 pG
 co
@@ -4582,9 +4628,9 @@ aX
 cT
 dh
 dy
-Ts
 an
-Ts
+an
+an
 "}
 (18,1,1) = {"
 ah
@@ -4608,10 +4654,10 @@ ej
 (19,1,1) = {"
 He
 aj
-bc
+aj
 aZ
 bw
-bc
+aj
 qY
 df
 cr
@@ -4622,7 +4668,7 @@ dS
 dA
 an
 an
-Ts
+an
 "}
 (20,1,1) = {"
 aj
@@ -4632,7 +4678,7 @@ ao
 de
 da
 aj
-Cv
+mR
 cs
 LP
 DU
@@ -4665,8 +4711,8 @@ tS
 (22,1,1) = {"
 aj
 aj
+aj
 bc
-ao
 de
 ai
 aj

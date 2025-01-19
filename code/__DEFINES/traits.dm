@@ -260,7 +260,6 @@
 #define TRAIT_LIVESTOCK "livestock"
 #define TRAIT_NO_FAT_SLOWDOWN "no_fat_slowdown"
 #define HELPLESSNESS_TRAIT "helplessness"
-#define TRAIT_NO_HELPLESSNESS "no_helplessness"
 
 #define TRAIT_RADRESONANCE "radresonance" //FIX THIS LATER
 #define COMSIG_MICRO_PICKUP_FEET "micro_force_grabbed"			//From /datum/element/mob_holder/micro
@@ -289,14 +288,6 @@
 #define TRAIT_METAL_CRUNCHER 	"metal_cruncher"
 #define TRAIT_WATER_SPONGE 		"water_sponge"
 #define TRAIT_FATROUSAL         "fatrousal"
-
-//GS13 Port
-#define TRAIT_HEADPAT_SLUT		"headpat_slut"
-#define TRAIT_NEVER_CLONE       "donotclone"
-#define TRAIT_HEAT				"heat"
-#define TRAIT_DISTANT			"headpat_hater"
-#define TRAIT_CUM_PLUS			"cum_plus"
-#define TRAIT_TRANSFORMED 		"transformed"
 
 // mobility flag traits
 // IN THE FUTURE, IT WOULD BE NICE TO DO SOMETHING SIMILAR TO https://github.com/tgstation/tgstation/pull/48923/files (ofcourse not nearly the same because I have my.. thoughts on it)

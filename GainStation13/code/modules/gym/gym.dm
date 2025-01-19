@@ -83,7 +83,7 @@
 
 /obj/item/circuitboard/machine/treadmill
 	name = "Treadmill (Machine Board)"
-	build_path = /obj/machinery/treadmill
+	build_path = /obj/machinery/autolathe
 	req_components = list(/obj/item/stock_parts/manipulator = 1)
 
 /datum/design/treadmill

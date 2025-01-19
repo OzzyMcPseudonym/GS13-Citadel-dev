@@ -1,15 +1,14 @@
 #define BREASTS_ICON_MIN_SIZE 1
-#define BREASTS_ICON_MAX_SIZE 30
+#define BREASTS_ICON_MAX_SIZE 6
 
 /obj/item/organ/genital/breasts
 	name = "breasts"
 	desc = "Female milk producing organs."
 	icon_state = "breasts"
-	icon = 'GainStation13/icons/obj/genitals/breasts.dmi' //GS13 - hyperstation boobers
+	icon = 'icons/obj/genitals/breasts.dmi'
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_BREASTS
 	size = BREASTS_SIZE_DEF // "c". Refer to the breast_values static list below for the cups associated number values
-	var/max_size = 0 //GS13 Edit
 	fluid_id = /datum/reagent/consumable/milk
 	fluid_rate = MILK_RATE
 	producing = TRUE
@@ -21,7 +20,7 @@
 	unarousal_verb = "Your breasts no longer feel sensitive"
 	orgasm_verb = "leaking"
 	fluid_transfer_factor = 0.5
-	var/static/list/breast_values = list("a" =  1, "b" = 2, "c" = 3, "d" = 4, "e" = 5, "f" = 6, "g" = 7, "h" = 8, "i" = 9, "j" = 10, "k" = 11, "l" = 12, "m" = 13, "n" = 14, "o" = 15, "huge" = 16, "massive" = 17, "giga" = 25, "impossible" = 30, "flat" = 0)
+	var/static/list/breast_values = list("a" =  1, "b" = 2, "c" = 3, "d" = 4, "e" = 5, "f" = 6, "g" = 7, "h" = 8, "i" = 9, "j" = 10, "k" = 11, "l" = 12, "m" = 13, "n" = 14, "o" = 15, "huge" = 16, "flat" = 0)
 	var/cached_size //these two vars pertain size modifications and so should be expressed in NUMBERS.
 	var/prev_size //former cached_size value, to allow update_size() to early return should be there no significant changes.
 
@@ -76,7 +75,7 @@
 //this is far too lewd wah
 
 /obj/item/organ/genital/breasts/modify_size(modifier, min = -INFINITY, max = INFINITY)
-	var/new_value = clamp(cached_size + modifier, starting_size, max) //GS13 EDIT
+	var/new_value = clamp(cached_size + modifier, min, max)
 	if(new_value == cached_size)
 		return
 	prev_size = cached_size
@@ -116,8 +115,6 @@
 	else
 		color = "#[D.features["breasts_color"]]"
 	size = D.features["breasts_size"]
-	max_size = D.features["max_breasts_size"]
-	starting_size = D.features["breasts_size"]
 	shape = D.features["breasts_shape"]
 	if(!D.features["breasts_producing"])
 		genital_flags &= ~ (GENITAL_FUID_PRODUCTION|CAN_CLIMAX_WITH|CAN_MASTURBATE_WITH)

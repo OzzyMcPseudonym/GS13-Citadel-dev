@@ -5,19 +5,6 @@
 "c" = (
 /turf/open/water,
 /area/lavaland/surface/outdoors)
-"k" = (
-/obj/structure/bed/double,
-/turf/open/floor/plating/beach/sand,
-/area/lavaland/surface/outdoors)
-"o" = (
-/obj/structure/bed/double,
-/obj/item/reagent_containers/rag/towel,
-/turf/open/floor/plating/beach/sand,
-/area/lavaland/surface/outdoors)
-"u" = (
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/beach/sand,
-/area/lavaland/surface/outdoors)
 "I" = (
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
@@ -26,10 +13,6 @@
 /turf/open/floor/plating/beach/sand,
 /area/lavaland/surface/outdoors)
 "U" = (
-/turf/open/floor/plating/beach/sand,
-/area/lavaland/surface/outdoors)
-"Z" = (
-/obj/item/flashlight/lantern,
 /turf/open/floor/plating/beach/sand,
 /area/lavaland/surface/outdoors)
 
@@ -52,7 +35,7 @@ I
 I
 a
 a
-a
+I
 a
 a
 I
@@ -63,11 +46,11 @@ I
 I
 I
 a
-c
-c
-c
-c
-c
+U
+U
+U
+U
+U
 a
 I
 I
@@ -75,53 +58,53 @@ I
 (4,1,1) = {"
 I
 a
+U
+L
 c
 c
 c
-c
-c
-c
-c
+L
+U
 a
 I
 "}
 (5,1,1) = {"
 I
 a
+U
 c
 c
 c
 c
 c
-c
-c
+U
 a
 I
 "}
 (6,1,1) = {"
 I
-a
-Z
+I
+U
 c
 c
 c
 c
 c
-Z
-a
+U
+I
 I
 "}
 (7,1,1) = {"
 I
-u
+a
 U
-k
-o
+c
+c
+c
+c
+c
 U
-k
-o
-U
-u
+a
 I
 "}
 (8,1,1) = {"
@@ -129,9 +112,9 @@ I
 a
 U
 L
-U
-U
-U
+c
+c
+c
 L
 U
 a
@@ -156,7 +139,7 @@ I
 I
 a
 a
-u
+I
 a
 a
 I

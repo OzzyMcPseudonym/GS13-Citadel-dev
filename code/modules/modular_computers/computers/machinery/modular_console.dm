@@ -2,7 +2,7 @@
 	name = "console"
 	desc = "A stationary computer."
 
-	icon = 'GainStation13/icons/obj/modular_console.dmi' //GS13 - gatofication sprites
+	icon = 'icons/obj/modular_console.dmi'
 	icon_state = "console"
 	icon_state_powered = "console"
 	icon_state_unpowered = "console-off"

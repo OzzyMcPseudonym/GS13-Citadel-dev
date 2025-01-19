@@ -288,7 +288,6 @@
 /obj/effect/decal/cleanable/glitter/pink
 	name = "pink glitter"
 	icon_state = "plasma_old"
-	color = "#9e0089"
 
 /obj/effect/decal/cleanable/glitter/white
 	name = "white glitter"
@@ -297,7 +296,6 @@
 /obj/effect/decal/cleanable/glitter/blue
 	name = "blue glitter"
 	icon_state = "freon_old"
-	color = "#2dd6ff"
 
 /obj/effect/decal/cleanable/plasma
 	name = "stabilized plasma"

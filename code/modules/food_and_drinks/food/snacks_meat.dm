@@ -142,7 +142,6 @@
 /obj/item/reagent_containers/food/snacks/rawmeatball
 	name = "raw meatball"
 	desc = "Raw mushy meat. Better cook this!"
-	icon = 'GainStation13/icons/obj/food/food.dmi' //GS13 - better meatball sprite
 	icon_state = "rawmeatball"
 	cooked_type = /obj/item/reagent_containers/food/snacks/meatball
 	list_reagents = list(/datum/reagent/consumable/nutriment = 3)
@@ -153,7 +152,6 @@
 /obj/item/reagent_containers/food/snacks/meatball
 	name = "meatball"
 	desc = "MAMA MIA DAS A SPICY"
-	icon = 'GainStation13/icons/obj/food/food.dmi' //GS13 - better meatball sprite
 	icon_state = "meatball"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/nutriment/vitamin = 1)
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
@@ -478,7 +476,7 @@
 
 /obj/item/reagent_containers/food/snacks/cube/chicken
 	name = "chicken cube"
-	desc = "A new GATO classic, the chicken cube. Tastes like everything!" //GS13 - Nanotrasen to GATO
+	desc = "A new Nanotrasen classic, the chicken cube. Tastes like everything!"
 	list_reagents = list(/datum/reagent/consumable/eggyolk = 30, /datum/reagent/medicine/strange_reagent = 1)
 	tastes = list("chicken" = 1, "the country" = 1, "chicken bouillon" = 1)
 	dried_being = /mob/living/simple_animal/chicken

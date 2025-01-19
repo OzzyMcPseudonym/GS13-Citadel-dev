@@ -114,7 +114,7 @@
 
 /obj/item/toy/syndicateballoon
 	name = "syndicate balloon"
-	desc = "There is a tag on the back that reads \"FUK GT!11!\"." //GS13 - NT to GT
+	desc = "There is a tag on the back that reads \"FUK NT!11!\"."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "syndballoon"
 	item_state = "syndballoon"
@@ -684,7 +684,7 @@
 /obj/item/toy/cards/deck
 	name = "deck of cards"
 	desc = "A deck of space-grade playing cards."
-	icon = 'GainStation13/icons/obj/toy.dmi' //GS13 - GATO sprite
+	icon = 'icons/obj/toys/toy.dmi'
 	deckstyle = "nanotrasen"
 	icon_state = "deck_nanotrasen_full"
 	w_class = WEIGHT_CLASS_SMALL
@@ -815,7 +815,7 @@
 /obj/item/toy/cards/cardhand
 	name = "hand of cards"
 	desc = "A number of cards not in a deck, customarily held in ones hand."
-	icon = 'GainStation13/icons/obj/toy.dmi' //GS13 - GATO sprite
+	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "none"
 	w_class = WEIGHT_CLASS_TINY
 	var/list/currenthand = list()
@@ -912,7 +912,7 @@
 /obj/item/toy/cards/singlecard
 	name = "card"
 	desc = "a card"
-	icon = 'GainStation13/icons/obj/toy.dmi' //GS13 - GATO sprite
+	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "singlecard_down_nanotrasen"
 	w_class = WEIGHT_CLASS_TINY
 	var/cardname = null

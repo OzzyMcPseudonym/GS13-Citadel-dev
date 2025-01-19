@@ -25,7 +25,6 @@
 	/// How many items we can push per-pump.
 	var/pump_limit = 5
 
-
 /obj/structure/disposaloutlet/industrial_feeding_tube/Initialize(mapload)
 	. = ..()
 
@@ -39,24 +38,6 @@
 		anchored = TRUE
 		welded = TRUE //Make it functional
 
-/obj/structure/disposaloutlet/industrial_feeding_tube/examine(mob/user)
-	. = ..()
-	if(LAZYLEN(pump_stuff))
-		switch(LAZYLEN(pump_stuff))
-			if(1)
-				. += "It seems to have something inside"
-			if(2 to 20)
-				. += "It seems to have some stuff inside"
-			if(21 to 50)
-				. += "It seems to be rather full of stuff!"
-			if(51 to 200)
-				. += "<b>It's walls are bulging out with tons of stuff packed inside!!</b>"
-			else
-				. += "<span class='danger'>The whole machine is shuddering as it strains to contain hundreds of objects!</span>"
-	if(clogged)
-		. += "<span class='warning'>It seems to be clogged with stuff!</span>"
-
-
 /obj/structure/disposaloutlet/industrial_feeding_tube/CheckParts(list/parts_list)
 	..()
 	pump_limit = 0
@@ -66,7 +47,6 @@
 		pump_limit += mb.rating * 2.5 // ~20 items per pump with 2 bluespace bins
 
 	pump_limit = ceil(pump_limit) //Only whole numbers
-
 
 /obj/structure/disposaloutlet/industrial_feeding_tube/deconstruct(disassembled)
 	if(!(flags_1 & NODECONSTRUCT_1))
@@ -98,23 +78,24 @@
 
 /obj/structure/disposaloutlet/industrial_feeding_tube/MouseDrop(mob/living/target)
 	. = ..()
-	if(!usr.canUseTopic(src, BE_CLOSE))
+	if(!usr.canUseTopic(src, BE_CLOSE)) // iscarbon() so that xenos/wendigos(?) can do feeding stuff maybe. Maybe.
 		return
 	if(!welded)
 		to_chat(usr, "<span class='warning'>You need to weld down \the [src] before you can use it.</span>")
 		return
-	if(attached)
-		attached.visible_message("<span class='warning'>\The [src]'s tube is removed from [attached].</span>", "<span class='warning'>The tube is removed from you.")
-		detach_tube(FALSE)
-		return
 	if(!isliving(target))
 		return
+	if(attached)
+		attached.visible_message("<span class='warning'>[attached] is detached from [src].</span>")
+		attached = null
+		update_icon()
+		return
 
-	if(iscarbon(target)) // iscarbon() so that xenos/wendigos(?) can do feeding stuff maybe. Maybe.
+	if(iscarbon(target))
 		var/mob/living/carbon/feedee = target
 
-		if(HAS_TRAIT(feedee, TRAIT_TRASHCAN) || (feedee.vore_flags & FEEDING))
-			var/food_dump = input(usr, "Where do you shove the tube? (cancel to just feed normally)", "Select belly") as null|anything in feedee.vore_organs
+		if(HAS_TRAIT(feedee, TRAIT_TRASHCAN))
+			var/food_dump = input(usr, "Where do you shove the tube? (cancel for to just feed normally)", "Select belly") as null|anything in feedee.vore_organs
 			if(food_dump && isbelly(food_dump))
 				// Best to be safe with this thing. Since you can eat pretty much anythign with it...
 				// Including People, Intentionally or otherwise.
@@ -124,56 +105,38 @@
 						to_chat(usr, "[feedee] doesnt want to be fed by \the [src]...")
 						return
 
-				attach_tube(feedee, food_dump) // Attach in Vore Mode
-				return
+				output_dest = food_dump //Attach to vorebelly
+				attached = feedee
 
+				update_icon()
+				START_PROCESSING(SSobj, src)
+				face_atom(feedee)
+				return
 		//Either we arn't attaching to vorebelly, or we arnt able to. Let's try to feed them normally!
-		if(usr != feedee)
+		if(usr != feedee) //
 			var/feedeePrefCheck = alert(feedee, "[usr] is attempting to shove \the [src]'s tube into your mouth! Do you want this?", "THE TUBE", "Yes!!", "No!")
 			if(feedeePrefCheck != "Yes!!")
 				to_chat(usr, "[feedee] doesnt want to be fed by \the [src]...")
 				return
 
-		attach_tube(feedee) // Attach normally
+		output_dest = feedee //Attach normally
+		attached = feedee
+
+		update_icon()
+		START_PROCESSING(SSobj, src)
+		face_atom(feedee)
 		return
 
-/// Attaches the tube to the target. dest defaults to the target, if dest isnt defined
-/obj/structure/disposaloutlet/industrial_feeding_tube/proc/attach_tube(var/mob/living/target, var/dest = null, var/loud = TRUE)
-	if(!target)
-		return FALSE
-	if(dest)
-		output_dest = dest
-	else
-		output_dest = target
-	attached = target
-
-	if(loud)
-		if(isbelly(output_dest))
-			target.visible_message("\The [src]'s tube is shoved into [attached]!", "The tube is shoved directly into your [output_dest]!")
-		else
-			target.visible_message("\The [src]'s tube is shoved into [attached]!", "The tube is shoved directly into you!")
-
-	RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(check_target_dist))
-	update_icon()
-	face_atom(target)
-
-/obj/structure/disposaloutlet/industrial_feeding_tube/proc/detach_tube(var/loud = TRUE)
-	UnregisterSignal(attached, COMSIG_MOVABLE_MOVED)
-	if(loud)
-		attached.visible_message("<span class='warning'>[attached] is detached from [src].</span>")
-	attached = null
-	output_dest = null
-	update_icon()
-
-
-/obj/structure/disposaloutlet/industrial_feeding_tube/proc/check_target_dist()
-	if(!attached) //oh no
-		UnregisterSignal()
+/obj/structure/disposaloutlet/industrial_feeding_tube/process()
+	if(!attached)
+		return PROCESS_KILL
 
 	if(!(get_dist(src, attached) <= 1 && isturf(attached.loc)))
-		attached.visible_message("<span class='danger'The feeding tube is yanked out of [attached]!</span>","<span class='userdanger'>The feeding hose is yanked out of you!</span>")
-		detach_tube(FALSE)
-		return
+		to_chat(attached, "<span class='userdanger'>The feeding hose is yanked out of you!</span>")
+		attached = null
+		output_dest = null
+		update_icon()
+		return PROCESS_KILL
 
 	face_atom(attached)
 
@@ -202,9 +165,10 @@
 // expel the contents of the holder object, then delete it
 // called when the holder exits the outlet
 /obj/structure/disposaloutlet/industrial_feeding_tube/expel(obj/structure/disposalholder/H)
+	var/clunkVol = LAZYLEN(H.contents)
 	if(H.hasmob) //Uh oh-
-		playsound(src, "clang", 100)
-		visible_message("<span class='danger'>\The [src] loudly clunks as something large enters it's intake!</span>")
+		clunkVol += 25
+	playsound(src, H.hasmob ? "clang" : "clangsmall", clamp(clunkVol, 5, H.hasmob ? 50 : 25))
 	H.active = FALSE
 	H.vent_gas(get_turf(src))
 	if(clogged)
@@ -229,13 +193,11 @@
 			break
 	if(!pumping)
 		pumping = TRUE
-		playsound(src, 'GainStation13/sound/rakshasa/Corrosion3.ogg', 50, 1)
 		update_icon()
 		spawn(8)
 			pumping = FALSE
 			update_icon()
 	spawn(9) //Wait for the animation to finish
-
 
 		if(!output_dest || !attached) //We either arnt, or got disconnected by time stuff was about to splort out!
 			spew(this_pump, TRUE)
@@ -289,13 +251,13 @@
 					if(is_type_in_list(I, item_vore_blacklist))
 						inedible += I
 						continue
-
+				/*
 				if(isliving(AM))
 					var/mob/living/cutie = AM
-					if(!(cutie.vore_flags & DEVOURABLE)) //Do not eat this QT...
+					if(cutie.devourable != TRUE) //Do not eat this QT...
 						inedible += cutie
 						continue
-
+				*/
 
 				fed_something = TRUE
 				AM.forceMove(output_dest)
@@ -305,7 +267,7 @@
 		// After everything, if we've pushed something, play the "rubber tube noise"
 		// It's technically an evil digestion sound from a snowflake shadekin, but it makes for a good tube sound. Thanks Verkie!
 		if(fed_something)
-			playsound(attached.loc, 'GainStation13/sound/rakshasa/Corrosion3.ogg', rand(50,70), 1)
+			playsound(attached.loc, 'v_CHOMPstation2/sound/rakshasa/Corrosion3.ogg', rand(10,50), 1)
 
 		if(LAZYLEN(pump_stuff) && repeat)
 			pump()
@@ -315,7 +277,7 @@
 
 /obj/structure/disposaloutlet/industrial_feeding_tube/expel_holder(obj/structure/disposalholder/H, playsound=FALSE)
 	if(playsound)
-		playsound(src, 'sound/machines/hiss.ogg', 25, 0, 0)
+		playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
 
 	if(!H)
 		return
@@ -328,7 +290,10 @@
 /obj/structure/disposaloutlet/industrial_feeding_tube/attack_hand(mob/user)
 	. = ..()
 	if(attached)
-		detach_tube()
+		attached.visible_message("<span class='warning'>[attached] is detached from [src].</span>")
+		attached = null
+		output_dest = null
+		update_icon()
 		return
 
 /obj/structure/disposaloutlet/industrial_feeding_tube/attackby(obj/item/I, mob/living/user, params)
@@ -375,31 +340,17 @@
 			update_icon()
 			return
 
+		if(TOOL_CROWBAR)
+			if(!clogged)
+				to_chat(user, "<span class='notice'>\The [src] doesnt seem to be clogged at the moment...")
+				return TRUE
+
+			user.visible_message("<span class='italics'>[user] starts to pry open the maintenance hatch of \the [src], attempting to unclog it...</span>")
+			if(do_after(user, 30, TRUE, src))
+				user.visible_message("<span class='notice'>[user] unclogs \the [src]!</span>")
+				unclog()
+			return
 	. = ..()
-
-/obj/structure/disposaloutlet/industrial_feeding_tube/crowbar_act(mob/living/user, obj/item/I)
-	if(!clogged)
-		to_chat(user, "<span class='notice'>\The [src] doesnt seem to be clogged at the moment...")
-		return TRUE
-	user.visible_message("<span class='italics'>[user] starts to pry open the maintenance hatch of \the [src], attempting to unclog it...</span>")
-	I.play_tool_sound(src, 100)
-	if(I.use_tool(src, user, 30))
-		user.visible_message("<span class='notice'>[user] pries open the maintenance hatch on \the [src], unclogging it!</span>")
-		unclog()
-	return TRUE
-
-
-// Plungers are a thing now, why not give them the ability to unclog?
-/obj/structure/disposaloutlet/industrial_feeding_tube/plunger_act(obj/item/plunger/P, mob/living/user, reinforced)
-	if(!clogged)
-		to_chat(user, "<span class='notice'>\The [src] doesnt seem to be clogged at the moment...")
-		return TRUE
-	user.visible_message("<span class='italics'>[user] starts to furiously plunge the tube of \the [src], attempting to unclog it...</span>")
-	//I.play_tool_sound(src, 100) I dont think plungers have a use sound...
-	if(P.use_tool(src, user, 20)) //Plungers are slightly shorter because funny niche use
-		user.visible_message("<span class='notice'>[user] pries open the maintenance hatch on \the [src], unclogging it!</span>")
-		unclog()
-	return
 
 /obj/structure/disposaloutlet/industrial_feeding_tube/welder_act(mob/living/user, obj/item/I)
 	if(!I.tool_start_check(user, amount=0))

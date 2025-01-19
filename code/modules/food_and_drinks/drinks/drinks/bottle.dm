@@ -261,7 +261,7 @@
 		if("A&A")
 			fullname = "Ash and Asher"
 		if("Generic")
-			fullname = "GATO Cheap Imitations" //GS13 - Nanotrasen to GATO
+			fullname = "Nanotrasen Cheap Imitations"
 	var/chance = 50
 
 	if(prob(chance))

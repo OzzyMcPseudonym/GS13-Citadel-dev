@@ -7,23 +7,11 @@
 	var/obj/item/organ/genital/breasts/breasts = H.getorganslot(ORGAN_SLOT_BREASTS)
 
 	if(butt)
-		if(butt.max_size > 0)
-			if((butt.size + size_change) <= butt.max_size)
-				butt.modify_size(size_change)
-		else
-			butt.modify_size(size_change)
+		butt.modify_size(size_change)
 	if(belly)
-		if(belly.max_size > 0)
-			if((belly.size + size_change) <= belly.max_size)
-				belly.modify_size(size_change)
-		else
-			belly.modify_size(size_change)
+		belly.modify_size(size_change)
 	if(breasts)
-		if(breasts.max_size > 0)
-			if((breasts.cached_size + size_change) <= breasts.max_size)
-				breasts.modify_size(size_change)
-		else
-			breasts.modify_size(size_change)
+		breasts.modify_size(size_change)
 
 	H.genital_override = TRUE
 	H.update_body()
@@ -50,7 +38,7 @@
 
 /datum/species/proc/handle_helplessness(mob/living/carbon/human/fatty)
 	var/datum/preferences/preferences = fatty?.client?.prefs
-	if(!istype(preferences) || HAS_TRAIT(fatty, TRAIT_NO_HELPLESSNESS))
+	if(!istype(preferences))
 		return FALSE
 
 	if(preferences.helplessness_no_movement)
@@ -154,7 +142,7 @@
 				ADD_TRAIT(fatty, TRAIT_NO_JUMPSUIT, HELPLESSNESS_TRAIT)
 
 				var/obj/item/clothing/under/jumpsuit = fatty.w_uniform
-				if(istype(jumpsuit) && jumpsuit.modular_icon_location == null)
+				if(istype(jumpsuit) && !istype(jumpsuit, /obj/item/clothing/under/color/grey/modular))
 					to_chat(fatty, "<span class='warning'>[jumpsuit] can no longer contain your weight!</span>")
 					fatty.dropItemToGround(jumpsuit)
 
@@ -173,17 +161,17 @@
 				ADD_TRAIT(fatty, TRAIT_NO_MISC, HELPLESSNESS_TRAIT)
 
 				var/obj/item/clothing/suit/worn_suit = fatty.wear_suit
-				if(istype(worn_suit) && !istype(worn_suit, /obj/item/clothing/suit/mod))
+				if(istype(worn_suit))
 					to_chat(fatty, "<span class='warning'>[worn_suit] can no longer contain your weight!</span>")
 					fatty.dropItemToGround(worn_suit)
 
 				var/obj/item/clothing/gloves/worn_gloves = fatty.gloves
-				if(istype(worn_gloves)&& !istype(worn_gloves, /obj/item/clothing/gloves/mod))
+				if(istype(worn_gloves))
 					to_chat(fatty, "<span class='warning'>[worn_gloves] can no longer contain your weight!</span>")
 					fatty.dropItemToGround(worn_gloves)
 
 				var/obj/item/clothing/shoes/worn_shoes = fatty.shoes
-				if(istype(worn_shoes) && !istype(worn_shoes, /obj/item/clothing/shoes/mod))
+				if(istype(worn_shoes))
 					to_chat(fatty, "<span class='warning'>[worn_shoes] can no longer contain your weight!</span>")
 					fatty.dropItemToGround(worn_shoes)
 
@@ -201,7 +189,7 @@
 			if(fatty.fatness >= preferences.helplessness_clothing_back)
 				ADD_TRAIT(fatty, TRAIT_NO_BACKPACK, HELPLESSNESS_TRAIT)
 				var/obj/item/back_item = fatty.back
-				if(istype(back_item) && !istype(back_item, /obj/item/mod))
+				if(istype(back_item))
 					to_chat(fatty, "<span class='warning'>Your weight makes it impossible for you to carry [back_item].</span>")
 					fatty.dropItemToGround(back_item)
 
@@ -232,48 +220,8 @@
 	id = "fat"
 	variable = TRUE
 
-/mob/living/carbon
-	var/list/fatness_delay_modifiers
-
-/datum/fatness_delay_modifier
-	var/name
-	var/amount = 0
-	var/multiplier = 1
-
-/mob/living/carbon/proc/add_fat_delay_modifier(name = "", amount = 0, multiplier = 1)
-	var/find_name = FALSE
-	for(var/datum/fatness_delay_modifier/modifier in fatness_delay_modifiers)
-		if(modifier.name == name && find_name == FALSE)
-			modifier.amount = amount
-			modifier.multiplier = multiplier
-			find_name = TRUE
-	if(find_name == FALSE)
-		var/datum/fatness_delay_modifier/new_modifier = new()
-		new_modifier.name = name
-		new_modifier.amount = amount
-		new_modifier.multiplier = multiplier
-		LAZYADD(fatness_delay_modifiers, new_modifier)
-
-/mob/living/carbon/proc/remove_fat_delay_modifier(name)
-	for(var/datum/fatness_delay_modifier/modifier in fatness_delay_modifiers)
-		if(modifier.name == name)
-			LAZYREMOVE(fatness_delay_modifiers, modifier)
-
-/datum/species/proc/apply_fatness_speed_modifiers(mob/living/carbon/human/H, fatness_delay)
-	var/delay_cap = FATNESS_MAX_MOVE_PENALTY
-	if(HAS_TRAIT(H, TRAIT_WEAKLEGS))
-		delay_cap = 60
-	for(var/datum/fatness_delay_modifier/modifier in H.fatness_delay_modifiers)
-		fatness_delay = fatness_delay + modifier.amount
-	for(var/datum/fatness_delay_modifier/modifier in H.fatness_delay_modifiers)
-		fatness_delay *= modifier.multiplier
-	fatness_delay = max(fatness_delay, 0)
-	fatness_delay = min(fatness_delay, delay_cap)
-	return fatness_delay
-
 /datum/species/proc/handle_fatness(mob/living/carbon/human/H)
 	handle_helplessness(H)
-	H.handle_modular_items()
 
 	// update movement speed
 	var/fatness_delay = 0
@@ -291,11 +239,7 @@
 				fatness_delay += (H.fatness / FATNESS_LEVEL_IMMOBILE) * FATNESS_WEAKLEGS_MODIFIER
 				fatness_delay = min(fatness_delay, 60)
 
-	if(fatness_delay)
-		fatness_delay = apply_fatness_speed_modifiers(H, fatness_delay)
-		H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/fatness, TRUE, fatness_delay)
-	else
-		H.remove_movespeed_modifier(/datum/movespeed_modifier/fatness)
+	H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/fatness, TRUE, fatness_delay)
 
 	if(HAS_TRAIT(H, TRAIT_BLOB))
 		handle_fatness_trait(

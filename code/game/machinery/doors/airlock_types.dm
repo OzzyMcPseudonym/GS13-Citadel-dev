@@ -6,19 +6,19 @@
 	abandoned = TRUE
 
 /obj/machinery/door/airlock/command
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/command.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
 	wiretypepath = /datum/wires/airlock/command
 	normal_integrity = 450
 
 /obj/machinery/door/airlock/security
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/security.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec
 	wiretypepath = /datum/wires/airlock/security
 	normal_integrity = 450
 
 /obj/machinery/door/airlock/engineering
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/engineering.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_eng
 	wiretypepath = /datum/wires/airlock/engineering
 
@@ -26,13 +26,13 @@
 	abandoned = TRUE
 
 /obj/machinery/door/airlock/medical
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/medical.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_med
 	wiretypepath = /datum/wires/airlock/medical
 
 /obj/machinery/door/airlock/maintenance
 	name = "maintenance access"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/maintenance.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_mai
 	normal_integrity = 250
 
@@ -41,18 +41,18 @@
 
 /obj/machinery/door/airlock/maintenance/external
 	name = "external airlock access"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/maintenanceexternal.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/maintenanceexternal.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_extmai
 
 /obj/machinery/door/airlock/mining
 	name = "mining airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/mining.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_min
 	wiretypepath = /datum/wires/airlock/cargo
 
 /obj/machinery/door/airlock/atmos
 	name = "atmospherics airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/atmos.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/atmos.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_atmo
 	wiretypepath = /datum/wires/airlock/engineering
 
@@ -60,22 +60,22 @@
 	abandoned = TRUE
 
 /obj/machinery/door/airlock/research
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/research.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/research.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_research
 	wiretypepath = /datum/wires/airlock/science
 
 /obj/machinery/door/airlock/freezer
 	name = "freezer airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/freezer.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/freezer.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_fre
 
 /obj/machinery/door/airlock/science
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/science.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/science.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_science
 	wiretypepath = /datum/wires/airlock/science
 
 /obj/machinery/door/airlock/virology
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/virology.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/virology.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_viro
 	wiretypepath = /datum/wires/airlock/medical
 
@@ -179,7 +179,7 @@
 
 /obj/machinery/door/airlock/gold
 	name = "gold airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/gold.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/gold.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_gold
 
 /obj/machinery/door/airlock/gold/glass
@@ -188,7 +188,7 @@
 
 /obj/machinery/door/airlock/silver
 	name = "silver airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/silver.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/silver.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_silver
 
 /obj/machinery/door/airlock/silver/glass
@@ -197,7 +197,7 @@
 
 /obj/machinery/door/airlock/diamond
 	name = "diamond airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/diamond.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/diamond.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_diamond
 	normal_integrity = 1000
 	explosion_block = 2
@@ -209,7 +209,7 @@
 
 /obj/machinery/door/airlock/uranium
 	name = "uranium airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/uranium.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/uranium.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_uranium
 	var/last_event = 0
 
@@ -231,7 +231,7 @@
 /obj/machinery/door/airlock/plasma
 	name = "plasma airlock"
 	desc = "No way this can end badly."
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/plasma.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/plasma.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_plasma
 
 /obj/machinery/door/airlock/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
@@ -272,7 +272,7 @@
 /obj/machinery/door/airlock/bananium
 	name = "bananium airlock"
 	desc = "Honkhonkhonk"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/bananium.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/bananium.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_bananium
 	doorOpen = 'sound/items/bikehorn.ogg'
 
@@ -282,7 +282,7 @@
 
 /obj/machinery/door/airlock/sandstone
 	name = "sandstone airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/sandstone.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/sandstone.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sandstone
 
 /obj/machinery/door/airlock/sandstone/glass
@@ -291,7 +291,7 @@
 
 /obj/machinery/door/airlock/wood
 	name = "wooden airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/wood.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/wood.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_wood
 
 /obj/machinery/door/airlock/wood/glass
@@ -301,8 +301,8 @@
 /obj/machinery/door/airlock/titanium
 	name = "shuttle airlock"
 	assemblytype = /obj/structure/door_assembly/door_assembly_titanium
-	icon = 'GainStation13/icons/obj/doors/airlocks/shuttle/shuttle.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/shuttle/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/shuttle/shuttle.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/shuttle/overlays.dmi'
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/titanium/glass
@@ -312,8 +312,8 @@
 
 /obj/machinery/door/airlock/bronze
 	name = "bronze airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/clockwork/pinion_airlock.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/clockwork/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/clockwork/pinion_airlock.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/clockwork/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_bronze
 
 /obj/machinery/door/airlock/bronze/seethru
@@ -327,8 +327,8 @@
 */
 
 /obj/machinery/door/airlock/public
-	icon = 'GainStation13/icons/obj/doors/airlocks/station2/glass.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/station2/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station2/glass.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/station2/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_public
 
 /obj/machinery/door/airlock/public/glass
@@ -356,9 +356,9 @@
 
 /obj/machinery/door/airlock/external
 	name = "external airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/external/external.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/external/overlays.dmi' //GS13 Edit: perspective sprites
-	note_overlay_file = 'GainStation13/icons/obj/doors/airlocks/external/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/external/external.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/external/overlays.dmi'
+	note_overlay_file = 'icons/obj/doors/airlocks/external/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_ext
 
 /obj/machinery/door/airlock/external/glass
@@ -371,16 +371,16 @@
 */
 
 /obj/machinery/door/airlock/centcom //Use grunge as a station side version, as these have special effects related to them via phobias and such.
-	icon = 'GainStation13/icons/obj/doors/airlocks/centcom/centcom.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/centcom/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_centcom
 	normal_integrity = 1000
 	security_level = 6
 	explosion_block = 2
 
 /obj/machinery/door/airlock/grunge
-	icon = 'GainStation13/icons/obj/doors/airlocks/centcom/centcom.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/centcom/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_grunge
 
 /obj/machinery/door/airlock/grunge/abandoned
@@ -393,8 +393,8 @@
 
 /obj/machinery/door/airlock/vault
 	name = "vault door"
-	icon = 'GainStation13/icons/obj/doors/airlocks/vault/vault.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/vault/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/vault/vault.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/vault/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_vault
 	wiretypepath = /datum/wires/airlock/secure
 	explosion_block = 2
@@ -408,16 +408,16 @@
 
 /obj/machinery/door/airlock/hatch
 	name = "airtight hatch"
-	icon = 'GainStation13/icons/obj/doors/airlocks/hatch/centcom.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/hatch/overlays.dmi' //GS13 Edit: perspective sprites
-	note_overlay_file = 'GainStation13/icons/obj/doors/airlocks/hatch/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/hatch/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
+	note_overlay_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_hatch
 
 /obj/machinery/door/airlock/maintenance_hatch
 	name = "maintenance hatch"
-	icon = 'GainStation13/icons/obj/doors/airlocks/hatch/maintenance.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/hatch/overlays.dmi' //GS13 Edit: perspective sprites
-	note_overlay_file = 'GainStation13/icons/obj/doors/airlocks/hatch/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/hatch/maintenance.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
+	note_overlay_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_mhatch
 
 /obj/machinery/door/airlock/maintenance_hatch/abandoned
@@ -430,8 +430,8 @@
 
 /obj/machinery/door/airlock/highsecurity
 	name = "high tech security airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/highsec/highsec.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/highsec/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/highsec/highsec.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/highsec/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_highsecurity
 	explosion_block = 2
 	normal_integrity = 500
@@ -445,8 +445,8 @@
 
 /obj/machinery/door/airlock/shuttle
 	name = "shuttle airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/shuttle/shuttle.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/shuttle/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/shuttle/shuttle.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/shuttle/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_shuttle
 
 /obj/machinery/door/airlock/shuttle/glass
@@ -456,10 +456,10 @@
 /obj/machinery/door/airlock/abductor
 	name = "alien airlock"
 	desc = "With humanity's current technological level, it could take years to hack this advanced airlock... or maybe we should give a screwdriver a try?"
-	icon = 'GainStation13/icons/obj/doors/airlocks/abductor/abductor_airlock.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/abductor/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/abductor/abductor_airlock.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/abductor/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_abductor
-	note_overlay_file = 'GainStation13/icons/obj/doors/airlocks/external/overlays.dmi' //GS13 Edit: perspective sprites
+	note_overlay_file = 'icons/obj/doors/airlocks/external/overlays.dmi'
 	damage_deflection = 30
 	explosion_block = 3
 	hackProof = TRUE
@@ -474,8 +474,8 @@
 
 /obj/machinery/door/airlock/cult
 	name = "cult airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/cult/runed/cult.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/cult/runed/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/cult/runed/cult.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/cult/runed/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_cult
 	hackProof = TRUE
 	aiControlDisabled = 1
@@ -524,8 +524,8 @@
 		return FALSE
 
 /obj/machinery/door/airlock/cult/proc/conceal()
-	icon = 'GainStation13/icons/obj/doors/airlocks/station/maintenance.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/station/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 	name = "airlock"
 	desc = "It opens and closes."
 	stealthy = TRUE
@@ -556,8 +556,8 @@
 	friendly = TRUE
 
 /obj/machinery/door/airlock/cult/unruned
-	icon = 'GainStation13/icons/obj/doors/airlocks/cult/unruned/cult.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/cult/unruned/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/cult/unruned/cult.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/cult/unruned/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_cult/unruned
 	openingoverlaytype = /obj/effect/temp_visual/cult/door/unruned
 
@@ -699,8 +699,8 @@
 
 /obj/machinery/door/airlock/glass_large
 	name = "large glass airlock"
-	icon = 'GainStation13/icons/obj/doors/airlocks/glass_large/glass_large.dmi' //GS13 Edit: perspective sprites
-	overlays_file = 'GainStation13/icons/obj/doors/airlocks/glass_large/overlays.dmi' //GS13 Edit: perspective sprites
+	icon = 'icons/obj/doors/airlocks/glass_large/glass_large.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/glass_large/overlays.dmi'
 	opacity = 0
 	assemblytype = null
 	glass = TRUE

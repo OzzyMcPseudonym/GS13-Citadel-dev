@@ -643,10 +643,6 @@
 	},
 /turf/open/floor/pod/dark,
 /area/ruin/lavaland/powered/beach)
-"ZH" = (
-/obj/structure/chair/comfy/plywood,
-/turf/open/floor/plating/beach/sand,
-/area/ruin/lavaland/powered/beach)
 
 (1,1,1) = {"
 aa
@@ -828,7 +824,7 @@ ar
 ar
 bz
 ar
-ZH
+bJ
 ar
 bS
 bT
@@ -892,7 +888,7 @@ ar
 ar
 ar
 ar
-ZH
+bJ
 bE
 bR
 bT
@@ -956,7 +952,7 @@ ar
 ap
 bx
 ar
-ZH
+bJ
 ar
 bR
 bT
@@ -1020,7 +1016,7 @@ ar
 ap
 ar
 ar
-ZH
+bJ
 ar
 bR
 bT
@@ -1084,7 +1080,7 @@ ap
 ar
 ar
 ar
-ZH
+bJ
 ar
 bR
 bT
@@ -1148,7 +1144,7 @@ ar
 ar
 ar
 ar
-ZH
+bJ
 ar
 bR
 bT

@@ -144,7 +144,7 @@
 
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
-	desc = "GATO-brand jackboots for all your jackboots-related needs. From genuine combat to tacticool LARPing, satisfaction is guaranteed." //GS13 - Nanotrasen to GATO
+	desc = "Nanotrasen-brand jackboots for all your jackboots-related needs. From genuine combat to tacticool LARPing, satisfaction is guaranteed."
 	icon_state = "jackboots"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
@@ -157,7 +157,7 @@
 
 /obj/item/clothing/shoes/jackboots/sec
 	name = "security jackboots"
-	desc = "GATO-issue Security combat boots for combat scenarios or combat situations. All combat, all the time." //GS13 - Nanotrasen to GATO
+	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
 	icon_state = "jackboots_sec"
 
 /obj/item/clothing/shoes/jackboots/fast
@@ -199,7 +199,7 @@
 
 /obj/item/clothing/shoes/workboots
 	name = "work boots"
-	desc = "GATO-issue Engineering lace-up work boots for the especially blue-collar." //GS13 - Nanotrasen to GATO
+	desc = "Nanotrasen-issue Engineering lace-up work boots for the especially blue-collar."
 	icon_state = "workboots"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'

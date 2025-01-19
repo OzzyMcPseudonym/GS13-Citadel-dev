@@ -6,9 +6,6 @@
 	lose_text = "<span class='notice'>You don't feel absorbant anymore.</span>"
 	mob_trait = TRAIT_WATER_SPONGE
 
-/datum/reagent/water
-	var/bloat_coeff = 3.5
-
 /datum/reagent/water/on_mob_add(mob/living/L, amount)
 	if(HAS_TRAIT(L, TRAIT_WATER_SPONGE))
 		if(iscarbon(L))
@@ -33,7 +30,7 @@
 
 
 /datum/reagent/water/proc/fat_hide(mob/living/carbon/user)
-	return volume * bloat_coeff
+	return volume * 3.5
 
 /obj/machinery/shower/process()
 	..()
@@ -43,25 +40,17 @@
 				var/mob/living/carbon/L = AM
 				L.reagents.add_reagent(/datum/reagent/water, 3)
 
-
-/obj/item/organ/lungs/proc/water_check(datum/gas_mixture/breath, mob/living/carbon/human/H)
-	if(HAS_TRAIT(H, TRAIT_WATER_SPONGE))
+/* Disabling this for now.
+/mob/living/carbon/proc/water_check(datum/gas_mixture/breath)
+	if(HAS_TRAIT(src, TRAIT_WATER_SPONGE))
 		if(breath)
-			var/pressure = breath.return_pressure()
-			var/total_moles = breath.total_moles()
-			//#define PP_MOLES(X) ((X / total_moles) * pressure)
-			#define PP(air, gas) PP_MOLES(air.get_moles(gas))
-			var/gas_breathed = PP(breath,GAS_H2O)
-			if(gas_breathed > 0)
-				H.reagents.add_reagent(/datum/reagent/water, gas_breathed)
-				breath.adjust_moles(GAS_H2O, -gas_breathed)
-
-/obj/item/organ/lungs/check_breath(datum/gas_mixture/breath, mob/living/carbon/human/H)
-	water_check(breath, H)
-	. = ..()
-
-/datum/reagent/water/overdose_start(mob/living/M)
-	. = 1
+			if(breath.gases)
+				var/breath_gases = breath.gases
+				if(breath_gases[/datum/gas/water_vapor])
+					var/H2O_pp = breath.get_breath_partial_pressure(breath_gases[/datum/gas/water_vapor])
+					reagents.add_reagent(/datum/reagent/water, H2O_pp/10)
+					breath_gases[/datum/gas/water_vapor] -= H2O_pp
+*/
 
 /obj/structure/sink
 	var/mob/living/attached

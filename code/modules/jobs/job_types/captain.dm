@@ -7,7 +7,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "GATO officials and Space law" //GS13 - Nanotrasen to GATO
+	supervisors = "Nanotrasen officials and Space law"
 	selection_color = "#aac1ee"
 	req_admin_notify = 1
 	minimal_player_age = 20
@@ -50,10 +50,7 @@
 
 /datum/job/captain/announce(mob/living/carbon/human/H)
 	..()
-	var/displayed_rank = H.client?.prefs?.alt_titles_preferences[title]
-	if(!displayed_rank)	//Default to Captain
-		displayed_rank = "Captain"
-	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(minor_announce), "[displayed_rank] [H.nameless ? "" : "[H.real_name] "]on deck!"))
+	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(minor_announce), "Captain [H.nameless ? "" : "[H.real_name] "]on deck!"))
 
 /datum/outfit/job/captain
 	name = "Captain"

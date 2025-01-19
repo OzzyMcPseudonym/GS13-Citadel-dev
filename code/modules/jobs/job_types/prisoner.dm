@@ -4,8 +4,8 @@
 	department_head = list("The Security Team")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1 //GS13 - enabling prisoner (for now)
-	spawn_positions = 1 //GS13 - enabling prisoner (for now)
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "the security team"
 	random_spawns_possible = FALSE
 
