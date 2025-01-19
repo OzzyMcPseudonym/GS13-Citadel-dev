@@ -172,7 +172,7 @@
 
 /datum/quirk/voracious
 	name = "Voracious"
-	desc = "Nothing gets between you and your food. You eat twice as fast as everyone else!"
+	desc = "Nothing gets between you and your food. You eat and recover from stuffing twice as fast, while getting less full!" //GS13 Edit - Changed description
 	value = 1
 	mob_trait = TRAIT_VORACIOUS
 	gain_text = "<span class='notice'>You feel HONGRY.</span>"
@@ -190,7 +190,7 @@
 	// Get targets
 	var/obj/item/organ/eyes/old_eyes = quirk_holder.getorganslot(ORGAN_SLOT_EYES)
 	var/obj/item/organ/eyes/robotic/glow/new_eyes = new
-	
+
 	// Replace eyes
 	qdel(old_eyes)
 	new_eyes.Insert(quirk_holder)

@@ -101,16 +101,19 @@
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "av" = (
-/obj/machinery/airalarm{
-	name = "Theatre air alarm";
-	pixel_y = 24
+/obj/effect/turf_decal/tile/bar{
+	dir = 4
 	},
+/obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/loading_area{
-	dir = 1;
-	icon_state = "drain";
+	dir = 4;
+	icon_state = "borderfloor";
 	name = "drain"
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "aw" = (
 /turf/open/floor/plasteel/white,
@@ -126,7 +129,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "ay" = (
 /turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
@@ -209,6 +212,11 @@
 "aK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1,
 /obj/structure/chair/bench/left,
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
+	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "aL" = (
@@ -219,9 +227,12 @@
 	dir = 4;
 	name = "Theather Room"
 	},
-/turf/open/floor/plasteel/dark/side{
-	dir = 1
+/obj/effect/turf_decal/loading_area{
+	dir = 2;
+	icon_state = "borderfloor";
+	name = "drain"
 	},
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "aM" = (
 /obj/structure/cable{
@@ -231,6 +242,11 @@
 /area/xenoarch/gen)
 "aN" = (
 /obj/structure/chair/bench/right,
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "drain";
+	name = "drain"
+	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "aO" = (
@@ -238,12 +254,14 @@
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "aP" = (
+/obj/structure/punching_bag,
 /obj/effect/turf_decal/loading_area{
 	dir = 1;
-	icon_state = "drain";
+	icon_state = "borderfloorcee";
 	name = "drain"
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/box/red,
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "aR" = (
 /obj/structure/cable{
@@ -255,9 +273,15 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark/side{
-	dir = 1
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloor";
+	name = "drain"
 	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "aS" = (
 /obj/structure/disposalpipe/segment{
@@ -301,6 +325,11 @@
 "aX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 5
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
 	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
@@ -363,8 +392,11 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/structure/sign/poster/official/space_cops{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "bg" = (
 /obj/structure/filingcabinet,
 /obj/machinery/light{
@@ -381,7 +413,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "bh" = (
 /obj/machinery/vending/wardrobe/sec_wardrobe,
 /obj/effect/turf_decal/tile/red{
@@ -390,8 +422,11 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "bi" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1,
 /obj/structure/cable{
@@ -430,6 +465,11 @@
 "bo" = (
 /obj/machinery/light,
 /obj/structure/chair/bench/left,
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
+	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "bp" = (
@@ -459,12 +499,24 @@
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "bt" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
 	},
-/obj/structure/punching_bag,
-/obj/effect/turf_decal/box/red,
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "steel_decals"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 2;
+	icon_state = "steel_decals6"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "steel_decals6"
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "bu" = (
 /obj/effect/turf_decal/loading_area{
@@ -482,7 +534,12 @@
 	dir = 4;
 	name = "Theather Room"
 	},
-/turf/open/floor/plasteel/dark/side,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "bw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
@@ -504,13 +561,8 @@
 /turf/open/floor/plating,
 /area/xenoarch/arch)
 "bA" = (
-/obj/machinery/vending/gato,
-/obj/effect/turf_decal/loading_area{
-	dir = 1;
-	icon_state = "drain";
-	name = "drain"
-	},
-/turf/open/floor/plasteel/dark,
+/obj/structure/flora/junglebush/large,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "bB" = (
 /obj/structure/cable{
@@ -526,6 +578,16 @@
 	icon_state = "drain";
 	name = "drain"
 	},
+/obj/structure/rack/shelf,
+/obj/item/reagent_containers/rag/towel/random{
+	pixel_y = -6
+	},
+/obj/item/reagent_containers/rag/towel/random{
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/rag/towel/random{
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "bD" = (
@@ -538,6 +600,7 @@
 	icon_state = "drain";
 	name = "drain"
 	},
+/obj/structure/table,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "bE" = (
@@ -567,7 +630,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "bH" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -582,7 +645,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "bI" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1752,18 +1815,17 @@
 /turf/open/floor/plasteel/white,
 /area/xenoarch/bot)
 "ef" = (
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Mining External Airlock";
-	opacity = 0
-	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /obj/structure/fans/tiny,
-/turf/open/floor/plating{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Mining External Airlock";
+	opacity = 0;
+	dir = 4
 	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "eg" = (
 /obj/machinery/hydroponics/constructable,
@@ -1804,26 +1866,23 @@
 /obj/effect/turf_decal/loading_area{
 	icon_state = "steel_decals_central6"
 	},
-/turf/open/floor/plating{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "el" = (
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "em" = (
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Mining External Airlock";
-	opacity = 0
-	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
 /obj/structure/fans/tiny,
-/turf/open/floor/plating{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Mining External Airlock";
+	opacity = 0;
+	dir = 4
 	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "en" = (
 /obj/structure/table,
@@ -2205,6 +2264,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/item/beacon,
 /turf/open/floor/carpet,
 /area/xenoarch/gen)
 "eZ" = (
@@ -2457,11 +2517,11 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "fE" = (
-/turf/open/water,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "fF" = (
 /obj/structure/flora/ausbushes/reedbush,
-/turf/open/water,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "fG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
@@ -2515,7 +2575,15 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/bar,
-/turf/open/floor/plasteel/dark/side,
+/obj/effect/turf_decal/loading_area{
+	dir = 2;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "fQ" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -2822,7 +2890,7 @@
 /area/xenoarch/arch)
 "gv" = (
 /mob/living/simple_animal/butterfly,
-/turf/open/water,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "gw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -3169,7 +3237,7 @@
 /area/xenoarch/arch)
 "hn" = (
 /obj/item/statuebust,
-/turf/open/water,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "ho" = (
 /obj/structure/table,
@@ -4295,6 +4363,7 @@
 "jZ" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "ka" = (
@@ -4759,10 +4828,9 @@
 /turf/open/floor/plating,
 /area/xenoarch/gen)
 "kT" = (
-/obj/machinery/quantumpad/always_powered{
-	name = "To mining";
-	map_pad_id = "to_mining";
-	map_pad_link_id = "from_mining"
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "xenoarch"
 	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
@@ -5542,19 +5610,31 @@
 "mu" = (
 /obj/structure/flora/ausbushes/reedbush,
 /mob/living/simple_animal/butterfly,
-/turf/open/water,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "mv" = (
 /obj/structure/rack,
 /turf/open/floor/plating,
 /area/xenoarch/gen)
 "mw" = (
-/obj/structure/closet/emcloset,
-/turf/open/floor/wood,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/rack/shelf,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/structure/sign/poster/contraband/lizard{
+	pixel_y = 32
+	},
+/obj/item/toy/cards/deck,
+/turf/open/indestructible/hotelwood,
 /area/xenoarch/gen)
 "mx" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor/wood,
+/obj/machinery/vending/games,
+/obj/structure/sign/poster/official/foam_force_ad{
+	pixel_y = 32
+	},
+/turf/open/indestructible/hotelwood,
 /area/xenoarch/gen)
 "my" = (
 /obj/machinery/airalarm{
@@ -5569,7 +5649,7 @@
 /turf/open/indestructible/necropolis,
 /area/lavaland/surface/outdoors)
 "mA" = (
-/turf/open/floor/wood,
+/turf/open/floor/carpet/green,
 /area/xenoarch/gen)
 "mB" = (
 /turf/open/chasm/lavaland,
@@ -5602,14 +5682,19 @@
 	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "mI" = (
 /obj/effect/decal/cleanable/insectguts,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "mJ" = (
-/obj/structure/table/wood,
-/turf/open/floor/wood,
+/obj/structure/table/wood/poker,
+/obj/item/toy/figure/dsquad{
+	pixel_y = 7;
+	pixel_x = 6
+	},
+/obj/item/toy/figure/syndie,
+/turf/open/floor/carpet/green,
 /area/xenoarch/gen)
 "mK" = (
 /obj/machinery/light/small{
@@ -5642,21 +5727,17 @@
 /turf/open/floor/carpet,
 /area/xenoarch/gen)
 "mO" = (
-/obj/machinery/vending/boozeomat{
-	req_access = null
+/obj/structure/chair/beanbag/red,
+/obj/machinery/light/small{
+	dir = 8
 	},
-/turf/open/floor/wood,
+/obj/structure/sign/poster/official/fashion{
+	pixel_x = -32
+	},
+/turf/open/indestructible/hotelwood,
 /area/xenoarch/gen)
 "mP" = (
-/obj/structure/table/wood,
-/obj/item/circuitboard/machine/chem_dispenser/drinks{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/circuitboard/machine/chem_dispenser/drinks/beer{
-	pixel_x = -2
-	},
-/turf/open/floor/wood,
+/turf/open/indestructible/hotelwood,
 /area/xenoarch/gen)
 "mQ" = (
 /obj/machinery/light/small{
@@ -6231,7 +6312,7 @@
 /area/xenoarch/gen)
 "oj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/water,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "ok" = (
 /obj/effect/turf_decal/loading_area{
@@ -7087,21 +7168,8 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
 "qJ" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game{
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game{
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/obj/effect/turf_decal/loading_area{
-	dir = 1;
-	icon_state = "drain";
-	name = "drain"
-	},
-/turf/open/floor/plasteel/dark,
+/obj/machinery/computer/security/telescreen/entertainment,
+/turf/closed/wall,
 /area/xenoarch/gen)
 "qK" = (
 /obj/machinery/door/airlock/vault{
@@ -7138,6 +7206,15 @@
 	dir = 4;
 	icon_state = "steel_decals3"
 	},
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"qN" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_panel";
+	name = "steel pannel"
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "qO" = (
@@ -7297,6 +7374,10 @@
 	},
 /turf/open/floor/engine,
 /area/xenoarch/caloriteresearch_powered)
+"rx" = (
+/obj/item/beacon,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "ry" = (
 /obj/item/bodypart/l_leg{
 	pixel_y = 8;
@@ -7352,6 +7433,18 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/xenoarch/caloriteresearch_powered)
+"rK" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 6;
+	icon_state = "steel_decals6"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 5;
+	icon_state = "steel_decals6"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "rL" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -7361,7 +7454,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "rR" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -7385,8 +7478,19 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
+"rV" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "rW" = (
 /obj/machinery/power/emitter{
 	dir = 1
@@ -7396,6 +7500,10 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"rZ" = (
+/obj/structure/fireplace,
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "sa" = (
 /obj/structure/door_assembly/door_assembly_vault,
 /turf/open/floor/plasteel/dark,
@@ -7430,7 +7538,7 @@
 /obj/item/ashtray{
 	name = "candle holder"
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "sk" = (
 /obj/machinery/autolathe,
@@ -7441,7 +7549,7 @@
 /area/xenoarch/caloriteresearch_powered)
 "sl" = (
 /obj/structure/chair/sofa,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "sn" = (
 /turf/closed/wall/rust,
@@ -7455,6 +7563,14 @@
 /area/xenoarch/bot{
 	name = "Demon Teleporter"
 	})
+"sq" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1;
+	icon_state = "steel_decals_central4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "sr" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -7472,6 +7588,7 @@
 	dir = 8;
 	icon_state = "steel_decals_central4"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "su" = (
@@ -7534,6 +7651,12 @@
 /obj/item/trash/can,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
+"sH" = (
+/obj/structure/sign/poster/contraband/energy_swords{
+	pixel_x = -32
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "sI" = (
 /obj/item/melee/cultblade{
 	pixel_x = -20
@@ -7569,13 +7692,12 @@
 "sN" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 1;
-	icon_state = "drain";
+	icon_state = "borderfloorfull";
 	name = "drain"
 	},
-/obj/structure/sign/poster/official/space_cops{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/box/red,
+/obj/structure/scale,
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "sO" = (
 /obj/structure/cable{
@@ -7747,7 +7869,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/box/mre/menu3,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "tC" = (
 /turf/open/floor/plating{
@@ -7809,6 +7931,10 @@
 /obj/machinery/vending/engivend,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"tU" = (
+/obj/item/toy/cards/singlecard,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "tW" = (
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/robot_debris,
@@ -7839,13 +7965,19 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_unpowered)
+"ug" = (
+/obj/structure/sign/poster/contraband/buzzfuzz{
+	pixel_x = -32
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "uh" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
 /obj/machinery/vending/dinnerware,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "uj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -7920,6 +8052,13 @@
 /obj/structure/rack,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"ux" = (
+/obj/effect/turf_decal/caution{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "uz" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 4
@@ -7950,7 +8089,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "uG" = (
 /obj/item/projectile/beam/fattening/cannon,
 /turf/open/floor/mineral/calorite,
@@ -7970,6 +8109,18 @@
 /obj/machinery/field/generator,
 /turf/open/floor/engine,
 /area/xenoarch/caloriteresearch_powered)
+"uQ" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 2;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 6;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "uR" = (
 /obj/structure/closet/firecloset,
 /obj/machinery/light/small{
@@ -7977,6 +8128,14 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"uS" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "uT" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -8036,8 +8195,14 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "vg" = (
-/obj/structure/table,
-/obj/item/reagent_containers/glass/beaker/waterbottle,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#e8eaff"
+	},
+/obj/item/chair/stool,
+/obj/structure/sign/poster/contraband/pwr_game{
+	pixel_x = 32
+	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "vh" = (
@@ -8050,8 +8215,15 @@
 /obj/structure/sink{
 	pixel_y = 28
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
+"vi" = (
+/obj/structure/chair/beanbag/blue{
+	dir = 8
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "vk" = (
 /obj/effect/turf_decal/stripes{
 	dir = 1
@@ -8085,6 +8257,11 @@
 /obj/structure/falsewall,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"vs" = (
+/obj/structure/girder,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/lavaland_baseturf,
+/area/xenoarch/caloriteresearch_unpowered)
 "vu" = (
 /obj/item/reagent_containers/food/snacks/cakeslice/birthday,
 /turf/open/indestructible/chocolate,
@@ -8119,6 +8296,11 @@
 	},
 /turf/open/candyfloor,
 /area/ruin/powered/candyland)
+"vF" = (
+/obj/structure/chair/bronze,
+/obj/item/toy/figure/ian,
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "vG" = (
 /obj/machinery/conveyor_switch{
 	id = "calorietrash"
@@ -8129,6 +8311,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"vH" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -31
+	},
+/obj/item/trash/boritos{
+	pixel_x = -6
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "vI" = (
 /obj/structure/sink{
 	dir = 8;
@@ -8141,6 +8332,54 @@
 /obj/structure/flora/rock,
 /turf/open/floor/mineral/calorite,
 /area/lavaland/surface/outdoors)
+"vL" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 10;
+	icon_state = "steel_decals6"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 9;
+	icon_state = "steel_decals6"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"vM" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1;
+	icon_state = "steel_decals9"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4;
+	icon_state = "steel_decals9"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 2;
+	icon_state = "steel_decals9"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8;
+	icon_state = "steel_decals9"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"vN" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/chair/beanbag/gato{
+	dir = 8
+	},
+/obj/structure/sign/poster/official/nanomichi_ad{
+	pixel_x = 32
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
+"vP" = (
+/obj/structure/mirror,
+/turf/closed/wall,
+/area/xenoarch/gen)
 "vQ" = (
 /obj/structure/trap/fattening,
 /turf/open/floor/carpet/orange,
@@ -8166,6 +8405,15 @@
 	icon_state = "platingdmg1"
 	},
 /area/xenoarch/caloriteresearch_powered)
+"vW" = (
+/obj/structure/sink{
+	pixel_y = 20
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "vX" = (
 /obj/machinery/light{
 	dir = 1
@@ -8249,6 +8497,17 @@
 	},
 /turf/closed/wall,
 /area/xenoarch/caloriteresearch_powered)
+"wp" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "drain";
+	name = "drain"
+	},
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "wt" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 8
@@ -8270,6 +8529,12 @@
 /mob/living/simple_animal/hostile/feed/chocolate_slime,
 /turf/open/chocolateriver,
 /area/ruin/powered/candyland)
+"ww" = (
+/obj/machinery/treadmill{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "wx" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/plasteel/dark,
@@ -8363,6 +8628,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"wV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/xenoarch/caloriteresearch_powered)
 "wW" = (
 /obj/item/reagent_containers/food/snacks/candy,
 /turf/open/candyfloor,
@@ -8388,8 +8658,29 @@
 /turf/open/floor/plasteel/rockvault,
 /area/xenoarch/nothinghere)
 "xa" = (
-/obj/machinery/space_heater,
-/turf/open/floor/wood,
+/obj/structure/fireplace,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/turf/open/indestructible/hotelwood,
 /area/xenoarch/gen)
 "xb" = (
 /obj/structure/fans/tiny/invisible,
@@ -8467,6 +8758,11 @@
 	dir = 1
 	},
 /area/xenoarch/gen)
+"xp" = (
+/obj/structure/chair/bronze,
+/obj/item/pen/red,
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "xq" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 9;
@@ -8532,6 +8828,13 @@
 /obj/structure/reagent_dispensers/cooking_oil,
 /turf/open/floor/plating,
 /area/xenoarch/gen)
+"xC" = (
+/obj/structure/chair/beanbag/purple{
+	dir = 4
+	},
+/obj/item/trash/popcorn,
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "xF" = (
 /obj/structure/table,
 /turf/open/floor/plating{
@@ -8567,6 +8870,30 @@
 /obj/structure/trash_pile,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"xM" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 4
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 2;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "xQ" = (
 /obj/structure/flora/grass/both,
 /obj/structure/window/reinforced/fulltile,
@@ -8629,6 +8956,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"xZ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 9;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "yb" = (
 /obj/structure/girder,
 /turf/open/floor/plating,
@@ -8673,6 +9011,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"yj" = (
+/obj/structure/weightmachine/weightlifter,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorfull";
+	name = "drain"
+	},
+/obj/effect/turf_decal/bot_red,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "yk" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -8687,7 +9035,7 @@
 	pixel_y = 6
 	},
 /obj/item/reagent_containers/glass/beaker/large,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "yl" = (
 /obj/effect/turf_decal/tile/bar,
@@ -8696,7 +9044,7 @@
 	},
 /obj/machinery/reagentgrinder,
 /obj/structure/table,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "yn" = (
 /obj/machinery/shower{
@@ -8802,6 +9150,14 @@
 	},
 /turf/open/floor/plating/lavaland_baseturf,
 /area/xenoarch/caloriteresearch_powered)
+"yM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/item/reagent_containers/glass/beaker/waterbottle/large,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "yN" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/tile/bar{
@@ -8819,12 +9175,24 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "yP" = (
 /obj/structure/flora/rock,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
+"yQ" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 5;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "yS" = (
 /obj/structure/barricade/wooden,
 /obj/structure/flora/rock/pile,
@@ -8867,6 +9235,13 @@
 	icon_state = "platingdmg1"
 	},
 /area/xenoarch/caloriteresearch_powered)
+"zb" = (
+/obj/item/paperplane{
+	pixel_x = 7;
+	pixel_y = -20
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "zc" = (
 /obj/structure/lollipop,
 /turf/open/candyfloor,
@@ -8931,6 +9306,11 @@
 	},
 /turf/open/floor/mineral/calorite,
 /area/xenoarch/caloriteresearch_powered)
+"zp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "zq" = (
 /obj/machinery/vending/dinnerware,
 /turf/open/floor/plasteel,
@@ -8945,6 +9325,25 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"zt" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/structure/sign/poster/contraband/bountyhunters{
+	pixel_y = 32
+	},
+/obj/structure/chair/stool,
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "zu" = (
 /obj/structure/fans/tiny/invisible,
 /obj/structure/barricade/wooden,
@@ -9014,6 +9413,24 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"zR" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 4
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "zS" = (
 /obj/item/reagent_containers/food/snacks/store/cake/apple,
 /turf/open/indestructible/chocolate,
@@ -9039,8 +9456,16 @@
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
 "zY" = (
-/obj/structure/table,
-/obj/item/reagent_containers/rag/towel,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/trash/can{
+	pixel_x = 7;
+	pixel_y = 12
+	},
+/obj/structure/mirror{
+	pixel_x = -24
+	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "zZ" = (
@@ -9064,6 +9489,22 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"Ac" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 3";
+	name = "Cell 3 Locker"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/turf_decal/loading_area{
+	icon_state = "drain";
+	name = "drain";
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "Ad" = (
 /obj/effect/light_emitter,
@@ -9091,6 +9532,25 @@
 /obj/structure/lattice,
 /turf/open/floor/plating/lavaland_baseturf,
 /area/xenoarch/caloriteresearch_unpowered)
+"Am" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorcee";
+	name = "drain"
+	},
+/obj/structure/rack,
+/obj/item/dumbbell{
+	pixel_y = -3
+	},
+/obj/item/dumbbell{
+	pixel_y = 1
+	},
+/obj/item/dumbbell{
+	pixel_y = 5
+	},
+/obj/effect/turf_decal/bot_red,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "Aq" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/soda_cans/thirteenloko{
@@ -9113,6 +9573,29 @@
 /obj/machinery/computer/operating,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"Au" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/storage/belt/military/snack,
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6{
+	pixel_x = 32
+	},
+/obj/structure/sign/poster/contraband/lusty_xenomorph{
+	pixel_y = 32
+	},
+/obj/item/gun/ballistic/automatic/toy/pistol/haydee,
+/obj/item/toy/plush/slimeplushie,
+/obj/item/toy/plush/lizardplushie,
+/obj/item/toy/gun/m41,
+/obj/item/toy/fluff/frisbee_poly/red,
+/obj/item/toy/fluff/bone_poly/squeak,
+/obj/item/circuitboard/machine/vending/donksofttoyvendor,
+/obj/item/throwing_star/toy,
+/obj/item/throwing_star/toy,
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "Av" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -9127,7 +9610,33 @@
 	icon_state = "drain";
 	name = "drain"
 	},
+/obj/structure/rack/shelf,
+/obj/item/reagent_containers/glass/beaker/waterbottle{
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/glass/beaker/waterbottle,
+/obj/item/reagent_containers/glass/beaker/waterbottle{
+	pixel_x = 8
+	},
+/obj/structure/sign/poster/official/nanomichi_ad{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
+"AA" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/loading_area{
+	dir = 2;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "AB" = (
 /obj/structure/scale,
@@ -9139,12 +9648,17 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "AC" = (
-/obj/structure/table,
-/obj/item/surgicaldrill{
-	pixel_y = 12;
-	pixel_x = 12
+/obj/structure/weightmachine/weightlifter,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorfull";
+	name = "drain"
 	},
-/turf/open/floor/plating,
+/obj/structure/sign/poster/contraband/lizard{
+	pixel_x = -32
+	},
+/obj/effect/turf_decal/bot_red,
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "AD" = (
 /obj/effect/decal/cleanable/vomit/old,
@@ -9370,7 +9884,7 @@
 /obj/structure/chair/sofa/right{
 	dir = 1
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Bx" = (
 /obj/machinery/door/airlock/glass{
@@ -9469,6 +9983,13 @@
 /obj/structure/flora/redgrass/redg,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"BR" = (
+/obj/item/trash/can{
+	pixel_y = 8;
+	pixel_x = 12
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "BS" = (
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
@@ -9502,7 +10023,7 @@
 	dir = 1
 	},
 /obj/machinery/vending/boozeomat/all_access,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Cm" = (
 /obj/machinery/door/airlock/public/glass{
@@ -9614,8 +10135,10 @@
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "CH" = (
-/obj/structure/table,
-/turf/open/floor/plating,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -31
+	},
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "CI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9630,6 +10153,15 @@
 	},
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
+"CM" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 9;
+	icon_state = "steel_decals4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "CN" = (
 /obj/structure/scale,
 /turf/open/floor/plasteel,
@@ -9661,6 +10193,7 @@
 /obj/structure/fluff/paper/stack{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "CR" = (
@@ -9668,6 +10201,11 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"CS" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "CT" = (
 /obj/effect/turf_decal/tile/purple{
@@ -9726,6 +10264,9 @@
 	name = "drain"
 	},
 /obj/structure/reagent_dispensers/water_cooler,
+/obj/structure/sign/poster/contraband/robust_softdrinks{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/gen)
 "De" = (
@@ -9839,6 +10380,7 @@
 	pixel_x = -2;
 	pixel_y = -1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "DE" = (
@@ -9889,7 +10431,23 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
+"DU" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 10;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 5;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "DV" = (
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
@@ -9917,8 +10475,24 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/book/manual/wiki/barman_recipes,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
+"DZ" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "steel_decals"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "steel_decals_central4"
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "Eb" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -9977,7 +10551,7 @@
 	dir = 8;
 	pixel_x = 11
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "En" = (
 /obj/item/shard{
@@ -9993,6 +10567,7 @@
 "Eq" = (
 /obj/structure/rack/shelf,
 /obj/item/pickaxe/drill,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Er" = (
@@ -10019,6 +10594,14 @@
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"Ex" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 2;
+	icon_state = "steel_decals_central4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "Ey" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4;
@@ -10036,6 +10619,7 @@
 	dir = 9;
 	icon_state = "steel_decals7"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Ez" = (
@@ -10088,6 +10672,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
+"EM" = (
+/obj/effect/turf_decal/stripes,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "EN" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8;
@@ -10136,7 +10725,15 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
+/area/xenoarch/caloriteresearch_powered)
+"EX" = (
+/obj/effect/turf_decal/loading_area,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "EY" = (
 /obj/effect/turf_decal/tile/purple{
@@ -10330,10 +10927,20 @@
 /obj/item/stack/ore/calorite,
 /turf/open/floor/carpet/orange,
 /area/lavaland/surface/outdoors)
+"FP" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "FQ" = (
-/obj/structure/weightmachine/weightlifter,
-/obj/effect/turf_decal/box/red,
-/turf/open/floor/plasteel/dark,
+/obj/structure/table,
+/obj/item/reagent_containers/glass/beaker/waterbottle/large,
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "FT" = (
 /obj/machinery/light/broken{
@@ -10371,11 +10978,18 @@
 /turf/open/floor/plasteel/white,
 /area/xenoarch/caloriteresearch_powered)
 "Ge" = (
-/obj/item/restraints/handcuffs/cable{
-	pixel_y = -10;
-	pixel_x = 13
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/turf/open/floor/plating,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "steel_grid";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "Gf" = (
 /obj/effect/turf_decal/loading_area,
@@ -10394,11 +11008,16 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/box/mre/menu4,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Gj" = (
 /obj/item/soap/deluxe,
 /turf/open/floor/plasteel/freezer,
+/area/xenoarch/caloriteresearch_powered)
+"Gk" = (
+/obj/structure/chair/bench/left,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "Gn" = (
 /obj/structure/girder,
@@ -10464,7 +11083,7 @@
 	dir = 1
 	},
 /obj/machinery/vending/mealdor,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "GI" = (
 /obj/structure/disposalpipe/segment{
@@ -10472,6 +11091,10 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"GJ" = (
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall,
+/area/xenoarch/gen)
 "GP" = (
 /obj/item/stack/ore/calorite,
 /obj/machinery/conveyor{
@@ -10577,11 +11200,11 @@
 	dir = 1
 	},
 /obj/machinery/vending/coffee,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Hm" = (
-/obj/item/taperecorder/empty,
-/turf/open/floor/plating,
+/obj/structure/flora/junglebush,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "Hn" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -10596,7 +11219,7 @@
 /area/xenoarch/caloriteresearch_powered)
 "Hr" = (
 /obj/structure/chair/sofa/right,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Ht" = (
 /turf/closed/wall/mineral/calorite,
@@ -10646,6 +11269,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
+"HI" = (
+/obj/structure/weightmachine/stacklifter,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorfull";
+	name = "drain"
+	},
+/obj/effect/turf_decal/bot_red,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "HJ" = (
 /turf/closed/wall/r_wall,
 /area/xenoarch/caloriteresearch_powered)
@@ -10676,7 +11309,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/xenoarch/gen)
+/area/xenoarch/arch)
 "HQ" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small/broken{
@@ -10694,7 +11327,7 @@
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "HT" = (
 /obj/item/reagent_containers/food/snacks/candy,
@@ -10792,6 +11425,14 @@
 /obj/item/book/granter/spell/fattening/belch,
 /turf/open/floor/mineral/calorite/strong,
 /area/lavaland/surface/outdoors)
+"Ir" = (
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "It" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -10821,7 +11462,7 @@
 	name = "candle holder"
 	},
 /obj/structure/table/wood,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "IE" = (
 /obj/structure/table,
@@ -10880,6 +11521,29 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"IR" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 10;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 5;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"IV" = (
+/obj/structure/chair/sofa/right/old{
+	dir = 1
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "IX" = (
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plating,
@@ -10969,6 +11633,15 @@
 "Jr" = (
 /turf/open/floor/plasteel/freezer,
 /area/xenoarch/caloriteresearch_powered)
+"Js" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1;
+	icon_state = "steel_decals_central4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "Jt" = (
 /obj/machinery/door/airlock/maintenance{
 	dir = 1;
@@ -11002,7 +11675,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/trash/tray,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Jy" = (
 /obj/item/multitool,
@@ -11011,6 +11684,26 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"Jz" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/obj/structure/sign/poster/contraband/c20r{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "JB" = (
 /obj/effect/turf_decal/stripes,
 /obj/effect/decal/cleanable/glass,
@@ -11024,6 +11717,22 @@
 /obj/item/stack/cable_coil/white,
 /obj/item/hand_labeler,
 /turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"JD" = (
+/obj/structure/table,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorcee";
+	name = "drain"
+	},
+/obj/item/reagent_containers/glass/beaker/waterbottle/large{
+	pixel_y = 6
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
+"JF" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/engine,
 /area/xenoarch/caloriteresearch_powered)
 "JH" = (
 /obj/effect/turf_decal/stripes/line{
@@ -11043,6 +11752,13 @@
 	dir = 10;
 	icon_state = "steel_decals6"
 	},
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"JJ" = (
+/obj/structure/chair/foldingchair{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "JN" = (
@@ -11121,7 +11837,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Kb" = (
 /obj/machinery/power/port_gen/pacman/mrs,
@@ -11195,6 +11911,47 @@
 /obj/item/pen,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"Kl" = (
+/obj/structure/table,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorcee";
+	name = "drain"
+	},
+/obj/item/reagent_containers/rag/towel,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
+"Km" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/sign/poster/contraband/revolver{
+	pixel_y = 32
+	},
+/obj/item/dumbbell{
+	pixel_y = -12;
+	pixel_x = -16
+	},
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
+"Kn" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 9;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 6;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "Ko" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -11202,7 +11959,7 @@
 	},
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Kp" = (
 /obj/machinery/door/airlock/medical,
@@ -11239,7 +11996,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Ky" = (
 /obj/item/export/bottle/tequila{
@@ -11252,6 +12009,12 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"KA" = (
+/obj/structure/chair/sofa/left/old{
+	dir = 8
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "KC" = (
 /obj/effect/turf_decal/box,
 /obj/structure/mecha_wreckage/ripley/firefighter,
@@ -11297,6 +12060,26 @@
 /obj/item/taperecorder,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
+"KO" = (
+/obj/structure/chair/sofa/right/old{
+	dir = 8
+	},
+/obj/item/reagent_containers/food/drinks/bigbottle/cola{
+	pixel_x = -3
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
+"KP" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "KR" = (
 /obj/machinery/door/airlock/public{
 	dir = 4
@@ -11322,15 +12105,40 @@
 	},
 /area/xenoarch/caloriteresearch_powered)
 "KW" = (
-/obj/structure/chair/office{
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/bar{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "KX" = (
 /obj/item/reagent_containers/food/snacks/candy_corn,
 /turf/open/indestructible/chocolate,
 /area/ruin/powered/candyland)
+"KZ" = (
+/obj/machinery/airalarm{
+	name = "Theatre air alarm";
+	pixel_y = 24
+	},
+/obj/structure/chair/stool,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
+"La" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating{
+	icon_state = "platingdmg1"
+	},
+/area/xenoarch/caloriteresearch_unpowered)
 "Lc" = (
 /obj/structure/tree/candylight,
 /turf/open/indestructible/chocolate,
@@ -11426,6 +12234,21 @@
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
+"LC" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/structure/chair/stool/bar,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "LE" = (
 /obj/effect/turf_decal{
 	dir = 1
@@ -11494,12 +12317,13 @@
 /turf/open/floor/engine,
 /area/xenoarch/caloriteresearch_powered)
 "LV" = (
-/obj/item/flashlight/seclite{
-	pixel_y = 8;
-	pixel_x = -12
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
-/turf/open/floor/plating,
-/area/xenoarch/gen)
+/turf/open/floor/plasteel/dark/side{
+	dir = 1
+	},
+/area/xenoarch/arch)
 "LW" = (
 /obj/structure/bed/double,
 /obj/item/bedsheet/double_blue,
@@ -11524,6 +12348,16 @@
 	},
 /turf/open/floor/carpet,
 /area/xenoarch/gen)
+"Ma" = (
+/obj/structure/table,
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_panel";
+	name = "steel pannel"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "Mb" = (
 /obj/machinery/light/small/broken{
 	dir = 8
@@ -11581,6 +12415,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"Mq" = (
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/mineral/basaltstone_floor,
+/area/xenoarch/caloriteresearch_powered)
 "Ms" = (
 /obj/structure/closet/toolcloset,
 /turf/open/floor/plating,
@@ -11624,6 +12466,9 @@
 /obj/structure/flora/rock,
 /turf/closed/mineral/random/volcanic/strangerock,
 /area/lavaland/surface/outdoors)
+"MB" = (
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/arch)
 "MC" = (
 /obj/item/radio/off,
 /turf/open/floor/circuit,
@@ -11656,6 +12501,22 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"MI" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 10;
+	icon_state = "steel_decals6"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 6;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 9;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "MJ" = (
 /obj/item/stack/spacecash/c200{
 	pixel_y = 9
@@ -11666,6 +12527,16 @@
 /obj/structure/trash_pile,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"MO" = (
+/obj/item/lighter{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "MP" = (
 /obj/structure/trap/fattening,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -11814,6 +12685,13 @@
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"Nv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/chair/stool,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "Ny" = (
 /turf/closed/wall/rust,
 /area/xenoarch/caloriteresearch_powered)
@@ -11832,6 +12710,11 @@
 	pixel_y = 8
 	},
 /turf/open/floor/carpet/red,
+/area/xenoarch/caloriteresearch_powered)
+"NI" = (
+/obj/structure/chair/stool,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "NJ" = (
 /obj/structure/table,
@@ -11883,7 +12766,7 @@
 	dir = 1
 	},
 /obj/machinery/vending/snack/orange,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "NT" = (
 /turf/open/floor/plasteel,
@@ -11932,6 +12815,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/freezer,
 /area/xenoarch/caloriteresearch_powered)
+"Of" = (
+/obj/structure/lattice,
+/obj/structure/fans/tiny/invisible,
+/turf/open/lava/smooth/lava_land_surface,
+/area/xenoarch/caloriteresearch_powered)
+"Og" = (
+/obj/structure/bookcase/random,
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "Oi" = (
 /obj/structure/table,
 /obj/effect/turf_decal/loading_area{
@@ -11982,7 +12874,7 @@
 	dir = 1;
 	pixel_y = 16
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Ou" = (
 /turf/open/floor/plating/airless,
@@ -12068,6 +12960,7 @@
 /area/xenoarch/caloriteresearch_powered)
 "OI" = (
 /obj/machinery/light/floor,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "OK" = (
@@ -12076,7 +12969,7 @@
 	pixel_x = 8;
 	pixel_y = 8
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "OM" = (
 /obj/machinery/shower{
@@ -12180,6 +13073,16 @@
 /obj/structure/scale,
 /turf/open/floor/mineral/calorite,
 /area/xenoarch/caloriteresearch_powered)
+"Pj" = (
+/obj/structure/table/wood/poker,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "Pn" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -12195,13 +13098,13 @@
 	pixel_x = 5;
 	pixel_y = -2
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Pp" = (
 /obj/structure/chair/sofa/corner{
 	dir = 8
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Pq" = (
 /obj/structure/table,
@@ -12248,12 +13151,15 @@
 /turf/open/candyfloor,
 /area/ruin/powered/candyland)
 "Py" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "steel_decals5"
 	},
-/obj/structure/scale,
-/obj/effect/turf_decal/bot_red,
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/loading_area{
+	icon_state = "drain";
+	name = "drain"
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "Pz" = (
 /obj/structure/disposalpipe/trunk{
@@ -12279,6 +13185,25 @@
 /obj/item/clothing/accessory/armband/medblue,
 /turf/open/floor/wood,
 /area/xenoarch/caloriteresearch_powered)
+"PD" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 2;
+	icon_state = "borderfloor";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "PF" = (
 /obj/structure/table,
 /obj/item/trash/tray,
@@ -12361,6 +13286,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
+"Qh" = (
+/obj/structure/chair/sofa/right/old{
+	dir = 4
+	},
+/obj/item/toy/katana,
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "Qj" = (
 /obj/machinery/processor,
 /turf/open/floor/plasteel/freezer,
@@ -12452,15 +13384,8 @@
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "QL" = (
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
-/obj/effect/turf_decal/loading_area{
-	dir = 1;
-	icon_state = "drain";
-	name = "drain"
-	},
-/turf/open/floor/plasteel/dark,
+/obj/structure/flora/junglebush/c,
+/turf/open/water/decorative,
 /area/xenoarch/gen)
 "QM" = (
 /obj/effect/turf_decal/stripes{
@@ -12567,7 +13492,7 @@
 /area/ruin/powered/candyland)
 "Rf" = (
 /obj/structure/chair/sofa/corner,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "Rh" = (
 /obj/structure/lattice/catwalk,
@@ -12579,6 +13504,19 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_unpowered)
+"Rl" = (
+/obj/structure/weightmachine/weightlifter,
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorfull";
+	name = "drain"
+	},
+/obj/structure/sign/poster/contraband/lusty_xenomorph{
+	pixel_x = -32
+	},
+/obj/effect/turf_decal/bot_red,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "Rm" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -12592,6 +13530,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"Ro" = (
+/obj/structure/chair/sofa/left/old{
+	dir = 4
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
 "Rp" = (
 /obj/item/reagent_containers/food/snacks/bluecherrycupcake,
 /turf/open/indestructible/bubblegum,
@@ -12600,6 +13544,29 @@
 /obj/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_unpowered)
+"Rs" = (
+/obj/structure/table/wood/poker,
+/obj/item/flashlight/lamp{
+	pixel_x = -5;
+	pixel_y = 12
+	},
+/obj/item/toy/figure/wizard{
+	pixel_y = 6;
+	pixel_x = 16
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
+"Ru" = (
+/obj/effect/turf_decal/loading_area{
+	icon_state = "drain";
+	name = "drain"
+	},
+/obj/structure/table,
+/obj/structure/sign/poster/official/mothdelamination{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "Rx" = (
 /obj/structure/girder,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -12650,6 +13617,13 @@
 /obj/machinery/mineral/processing_unit_console,
 /turf/closed/wall,
 /area/xenoarch/caloriteresearch_powered)
+"RJ" = (
+/obj/structure/sign/poster/contraband/gl{
+	pixel_y = 32
+	},
+/obj/structure/chair/stool,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "RL" = (
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
@@ -12660,6 +13634,17 @@
 "RM" = (
 /obj/effect/turf_decal/stripes,
 /obj/effect/decal/cleanable/ash,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
+"RQ" = (
+/obj/structure/chair/sofa/left/old{
+	dir = 1
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
+"RR" = (
+/obj/structure/chair/bench/right,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "RS" = (
@@ -12704,6 +13689,19 @@
 	icon_state = "engine"
 	},
 /area/xenoarch/nothinghere)
+"Sb" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 6;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 9;
+	icon_state = "steel_decals7"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "Sc" = (
 /obj/machinery/door/airlock/public,
 /turf/open/floor/plating/airless,
@@ -12772,6 +13770,31 @@
 "So" = (
 /obj/item/trash/popcorn,
 /turf/open/floor/plating,
+/area/xenoarch/caloriteresearch_powered)
+"Sq" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1;
+	icon_state = "steel_decals_central7"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 5;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 2;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 6;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Sr" = (
 /obj/structure/ore_box,
@@ -12945,10 +13968,12 @@
 /area/lavaland/surface/outdoors)
 "Tb" = (
 /obj/structure/table,
-/obj/item/scalpel{
-	pixel_y = 7
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "borderfloorcee";
+	name = "drain"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "Te" = (
 /obj/structure/table/wood,
@@ -13034,7 +14059,12 @@
 /obj/structure/chair/sofa{
 	dir = 1
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
+/area/xenoarch/caloriteresearch_powered)
+"Ts" = (
+/obj/effect/turf_decal/caution,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Tt" = (
 /obj/effect/turf_decal/loading_area{
@@ -13042,6 +14072,7 @@
 	icon_state = "steel_panel";
 	name = "steel pannel"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Tu" = (
@@ -13146,6 +14177,14 @@
 "TH" = (
 /turf/open/floor/pod,
 /area/xenoarch/caloriteresearch_powered)
+"TI" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4;
+	icon_state = "steel_decals_central4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "TJ" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/tile/yellow,
@@ -13185,6 +14224,7 @@
 	icon_state = "steel_decals7"
 	},
 /obj/effect/decal/cleanable/glass,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "TO" = (
@@ -13212,6 +14252,10 @@
 /obj/structure/mecha_wreckage/ripley/firefighter,
 /turf/open/floor/mech_bay_recharge_floor,
 /area/xenoarch/caloriteresearch_powered)
+"TT" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/lavaland_baseturf,
+/area/xenoarch/caloriteresearch_unpowered)
 "TU" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -13235,6 +14279,15 @@
 	name = "drain"
 	},
 /turf/open/floor/carpet,
+/area/xenoarch/gen)
+"Ud" = (
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/obj/machinery/treadmill{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "Ug" = (
 /obj/effect/turf_decal{
@@ -13295,6 +14348,11 @@
 /obj/effect/decal/cleanable/robot_debris,
 /turf/open/floor/plating,
 /area/lavaland/surface/outdoors)
+"Ur" = (
+/obj/structure/bed/double,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "Us" = (
 /obj/effect/decal/cleanable/greenglow/radioactive,
 /turf/open/floor/plasteel/grimy{
@@ -13309,6 +14367,25 @@
 /mob/living/simple_animal/hostile/feed/chocolate_slime,
 /turf/open/candyfloor,
 /area/ruin/powered/candyland)
+"Ux" = (
+/obj/structure/table/wood/poker,
+/obj/item/dice{
+	pixel_y = 4;
+	pixel_x = 9
+	},
+/obj/item/toy/figure/ninja{
+	pixel_x = -7;
+	pixel_y = -8
+	},
+/turf/open/floor/carpet/green,
+/area/xenoarch/gen)
+"Uy" = (
+/obj/machinery/door/airlock/maintenance{
+	dir = 4;
+	name = "The Atomic Banzai"
+	},
+/turf/open/floor/plating,
+/area/xenoarch/gen)
 "UA" = (
 /obj/structure/chair/stool,
 /turf/open/floor/plasteel,
@@ -13321,6 +14398,10 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/freezer,
+/area/xenoarch/caloriteresearch_powered)
+"UC" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "UE" = (
 /obj/structure/toilet{
@@ -13393,6 +14474,30 @@
 /obj/structure/curtain,
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_unpowered)
+"UT" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1;
+	icon_state = "steel_decals_central7"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 5;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 2;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 6;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "UV" = (
 /obj/effect/turf_decal,
 /obj/structure/cable{
@@ -13409,12 +14514,23 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"UX" = (
+/obj/structure/chair/stool/bar,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "UZ" = (
 /obj/item/clothing/neck/petcollar/calorite,
 /obj/item/trash/fatoray_scrap1,
 /obj/structure/rack/shelf,
 /turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
+"Va" = (
+/obj/structure/sign/poster/contraband/punch_shit{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "Ve" = (
 /obj/structure/table,
 /obj/machinery/light/small/broken{
@@ -13425,6 +14541,16 @@
 	pixel_y = -3
 	},
 /turf/open/floor/plasteel/white,
+/area/xenoarch/caloriteresearch_powered)
+"Vf" = (
+/obj/structure/chair/stool,
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_panel";
+	name = "steel pannel"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Vh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13465,6 +14591,20 @@
 /obj/item/stack/cable_coil/cut/red,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"Vr" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "Vt" = (
 /turf/open/floor/mineral/calorite,
 /area/xenoarch/caloriteresearch_powered)
@@ -13494,6 +14634,15 @@
 	},
 /turf/open/floor/plating/lavaland_baseturf,
 /area/xenoarch/caloriteresearch_powered)
+"VB" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "VD" = (
 /obj/effect/decal/cleanable/blood/innards{
 	pixel_x = -16
@@ -13521,6 +14670,7 @@
 /obj/effect/turf_decal/stripes{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "VO" = (
@@ -13557,6 +14707,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/arch)
+"VQ" = (
+/obj/structure/lattice,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/lavaland_baseturf,
+/area/xenoarch/caloriteresearch_unpowered)
 "VR" = (
 /obj/machinery/door/airlock/public/glass{
 	dir = 4
@@ -13602,6 +14757,13 @@
 /obj/effect/turf_decal/candy/bluewhite1,
 /turf/open/candyfloor,
 /area/ruin/powered/candyland)
+"Wg" = (
+/obj/item/trash/can{
+	pixel_x = -3;
+	pixel_y = -9
+	},
+/turf/open/indestructible/hotelwood,
+/area/xenoarch/gen)
 "Wh" = (
 /obj/item/wallframe/apc,
 /turf/open/floor/plating{
@@ -13660,7 +14822,7 @@
 	dir = 1
 	},
 /obj/machinery/vending/cola/random,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "WA" = (
 /obj/structure/lattice/catwalk,
@@ -13697,7 +14859,7 @@
 	dir = 1
 	},
 /obj/machinery/processor,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "WF" = (
 /obj/item/reagent_containers/food/snacks/candy_corn{
@@ -13743,7 +14905,7 @@
 /area/xenoarch/caloriteresearch_powered)
 "WS" = (
 /obj/structure/table/wood,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
 "WT" = (
 /turf/open/candyfloor,
@@ -13758,6 +14920,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/airless,
+/area/xenoarch/caloriteresearch_powered)
+"WW" = (
+/obj/machinery/suit_storage_unit/mining,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
 /area/xenoarch/caloriteresearch_powered)
 "WZ" = (
 /obj/structure/cable{
@@ -13819,9 +14986,7 @@
 /obj/effect/turf_decal/loading_area{
 	icon_state = "steel_decals_central6"
 	},
-/turf/open/floor/plating{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "Xj" = (
 /obj/machinery/shower{
@@ -13988,6 +15153,7 @@
 	dir = 6;
 	icon_state = "steel_decals7"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "XQ" = (
@@ -14053,6 +15219,11 @@
 	icon_state = "platingdmg1"
 	},
 /area/xenoarch/caloriteresearch_powered)
+"Yb" = (
+/obj/structure/table,
+/obj/item/reagent_containers/rag/towel,
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "Yd" = (
 /obj/effect/turf_decal/tile/bar,
 /turf/open/floor/plasteel,
@@ -14064,13 +15235,29 @@
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Yf" = (
-/obj/structure/weightmachine/stacklifter,
-/obj/effect/turf_decal/box/red,
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/loading_area{
+	icon_state = "steel_decals_central6"
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "Yg" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /turf/open/floor/plating,
+/area/xenoarch/caloriteresearch_powered)
+"Yh" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
+"Yj" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8;
+	icon_state = "steel_decals4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "Ym" = (
 /obj/effect/turf_decal/tile/purple{
@@ -14136,6 +15323,16 @@
 "YK" = (
 /obj/item/wrench,
 /turf/open/floor/plating,
+/area/xenoarch/caloriteresearch_powered)
+"YN" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "YO" = (
 /obj/structure/table,
@@ -14204,6 +15401,10 @@
 /obj/structure/trash_pile,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/xenoarch/caloriteresearch_unpowered)
+"Zf" = (
+/obj/item/trash/energybar,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "Zg" = (
 /obj/machinery/conveyor{
 	dir = 5;
@@ -14238,6 +15439,17 @@
 /obj/structure/tree/candylight,
 /turf/open/indestructible/bubblegum,
 /area/ruin/powered/candyland)
+"Zn" = (
+/obj/effect/turf_decal/stripes{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1;
+	icon_state = "steel_decals_central6"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/xenoarch/caloriteresearch_powered)
 "Zs" = (
 /obj/structure/table/optable,
 /obj/structure/curtain,
@@ -14257,8 +15469,16 @@
 	dir = 1;
 	pixel_y = 16
 	},
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
 /area/xenoarch/caloriteresearch_powered)
+"Zv" = (
+/obj/effect/turf_decal/loading_area{
+	icon_state = "drain";
+	name = "drain"
+	},
+/obj/machinery/vending/gato,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/gen)
 "Zw" = (
 /obj/item/stack/cable_coil/cut/red,
 /turf/open/floor/plating{
@@ -14279,7 +15499,14 @@
 	pixel_y = 6
 	},
 /obj/item/storage/box/drinkingglasses,
-/turf/open/floor/plating/asteroid/basalt,
+/turf/open/floor/mineral/basaltstone_floor,
+/area/xenoarch/caloriteresearch_powered)
+"Zz" = (
+/obj/effect/turf_decal/arrows{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "ZA" = (
 /obj/item/shard{
@@ -14305,6 +15532,21 @@
 	},
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"ZD" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/structure/chair/bench,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "ZE" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -14313,11 +15555,27 @@
 /area/xenoarch/gen)
 "ZF" = (
 /obj/item/trash/plate,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"ZG" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 1;
+	icon_state = "steel_decals5"
+	},
+/turf/open/floor/plasteel,
+/area/xenoarch/gen)
 "ZH" = (
 /turf/open/floor/carpet/orange,
 /area/lavaland/surface/outdoors)
+"ZJ" = (
+/obj/structure/table/wood,
+/obj/item/ashtray{
+	name = "candle holder"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/xenoarch/caloriteresearch_powered)
 "ZK" = (
 /obj/machinery/door/window/eastleft{
 	dir = 2
@@ -14326,8 +15584,18 @@
 /turf/open/floor/plasteel/grimy,
 /area/xenoarch/nothinghere)
 "ZM" = (
-/obj/structure/falsewall,
-/turf/open/floor/plating,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "steel_grid";
+	name = "drain"
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/xenoarch/gen)
 "ZP" = (
 /obj/structure/chair/stool/bar,
@@ -14339,6 +15607,7 @@
 	icon_state = "steel_decals4"
 	},
 /obj/effect/decal/cleanable/glass,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
 "ZX" = (
@@ -15083,10 +16352,10 @@ ab
 ab
 Sy
 by
+ZG
 fK
 fK
-fK
-fK
+Yf
 Sy
 bS
 Sy
@@ -15340,7 +16609,7 @@ ab
 ab
 Sy
 aj
-fK
+Py
 aK
 aX
 bo
@@ -15597,7 +16866,7 @@ ab
 ab
 Sy
 by
-fK
+Py
 IL
 dO
 ni
@@ -15854,9 +17123,9 @@ Sy
 Sy
 Sy
 am
-fK
+Py
 aN
-dO
+wp
 aN
 Sy
 bS
@@ -16111,7 +17380,7 @@ gD
 gD
 Sy
 aq
-fK
+ZG
 ad
 cC
 dI
@@ -16368,7 +17637,7 @@ hJ
 hJ
 nG
 fK
-fK
+Yf
 aM
 fK
 aO
@@ -16626,8 +17895,8 @@ bu
 Sy
 at
 aE
-aM
-fK
+rV
+uS
 bs
 Sy
 bX
@@ -16875,7 +18144,7 @@ ab
 ab
 ab
 ab
-ab
+Sy
 Sy
 Sy
 Sy
@@ -17132,17 +18401,17 @@ ab
 ab
 ab
 ab
-ab
 Sy
+KZ
 AC
 CH
-jN
-Sy
-bA
+Rl
+CH
+HI
 zY
-aR
-fP
-aA
+zR
+AA
+Nv
 Dd
 ar
 cj
@@ -17389,18 +18658,18 @@ ab
 ab
 ab
 ab
-ab
 Sy
+au
+JD
+el
 Tb
-jN
-jN
-Sy
-QL
-FQ
-aR
-fP
-bt
-Ax
+el
+Kl
+el
+zR
+AA
+aA
+Zv
 ar
 ck
 cI
@@ -17646,16 +18915,16 @@ ab
 ab
 ab
 ab
-ab
 Sy
-jN
-Ge
-jN
-ZM
+vW
+yj
+el
 sN
 el
-aR
-fP
+HI
+el
+zR
+AA
 aA
 Ax
 ar
@@ -17903,17 +19172,17 @@ ab
 ab
 ab
 ab
-ab
 Sy
-LV
+Jz
 KW
-Hm
-Sy
-aP
-Yf
-aR
-fP
-Py
+KW
+KW
+KW
+KW
+KW
+Ge
+AA
+aA
 bC
 ar
 ar
@@ -18160,15 +19429,15 @@ ab
 ab
 ab
 ab
-ab
 Sy
-Sy
-Sy
-Sy
-Sy
+zt
 av
-el
-aR
+av
+av
+av
+av
+av
+ZM
 fP
 aA
 bD
@@ -18417,18 +19686,18 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
 Sy
+RJ
+Am
+el
 aP
-FQ
+el
+aP
+el
 aR
 fP
-bt
-Ax
+Nv
+Ru
 ar
 ck
 cN
@@ -18674,17 +19943,17 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
 Sy
-qJ
+Km
+el
+el
+el
+Zf
+Va
 vg
 aR
 fP
-aA
+yM
 Jd
 ar
 cn
@@ -18931,16 +20200,16 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
 Sy
-dv
-dv
-aR
-fP
+DZ
+bt
+bt
+DZ
+vP
+Sy
+Sy
+xM
+PD
 cP
 dv
 ar
@@ -19188,11 +20457,11 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
+Sy
+Ud
+FQ
+Yb
+ww
 fL
 EJ
 aS
@@ -19445,13 +20714,13 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
+Sy
+qJ
+ei
+ei
+qJ
 fL
-Kg
+LV
 aU
 bV
 bj
@@ -19702,11 +20971,11 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
+Sy
+Hm
+bA
+QL
+Hm
 fL
 aF
 aV
@@ -19959,15 +21228,15 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
+Sy
+Sy
+Sy
+Sy
+Sy
 fL
 aG
 qI
-Sy
+fL
 bf
 ax
 rL
@@ -20224,9 +21493,9 @@ ab
 fL
 Kg
 qI
-Sy
+fL
 bg
-el
+MB
 uF
 fL
 nj
@@ -20481,9 +21750,9 @@ ab
 fL
 aI
 qI
-Sy
+fL
 bh
-el
+MB
 bG
 fL
 cp
@@ -20504,7 +21773,7 @@ nN
 Pa
 fK
 rc
-el
+rx
 EY
 xn
 nZ
@@ -20995,10 +22264,10 @@ ab
 fL
 aG
 qI
-Sy
-dv
-Sy
-Sy
+fL
+be
+fL
+fL
 fL
 fL
 fL
@@ -25125,14 +26394,14 @@ mj
 iv
 Sy
 fx
-fK
+tU
 jN
 hp
 mM
 mv
+jN
 Sy
 kw
-Sy
 Sy
 Sy
 Sy
@@ -25381,14 +26650,14 @@ eX
 lf
 gL
 Sy
-Sy
-hF
-Sy
-Sy
+GJ
+Uy
 Sy
 Sy
 Sy
-jN
+Sy
+Sy
+Sy
 jN
 jN
 jN
@@ -25639,13 +26908,13 @@ eX
 gL
 Sy
 mw
-mA
-mA
-mA
-mA
+mP
+vH
+sH
+ug
 mO
+Og
 Sy
-jN
 jN
 Fe
 jN
@@ -25897,12 +27166,12 @@ Vu
 Sy
 mx
 mA
+Ro
+Qh
 mA
-mJ
-mA
-mJ
+xC
+Og
 Sy
-jN
 jN
 jN
 jN
@@ -26153,14 +27422,14 @@ Sy
 Sy
 Sy
 xa
-mA
-mA
-mJ
-mA
-mJ
+xp
+Pj
+Rs
+RQ
+mP
+Og
 Sy
-jN
-jN
+Mt
 jN
 jN
 kw
@@ -26409,14 +27678,14 @@ lQ
 lQ
 lQ
 Sy
-mA
-mA
-mA
+rZ
+vF
+Ux
 mJ
-mA
+IV
 mP
+Og
 Sy
-Mt
 jN
 jN
 jN
@@ -26666,13 +27935,13 @@ lQ
 lQ
 lQ
 Sy
-dv
-dv
-dv
-Sy
-Sy
-Sy
-Sy
+MO
+mA
+KO
+KA
+zb
+mP
+Og
 Sy
 jN
 jN
@@ -26922,14 +28191,14 @@ lQ
 lQ
 lQ
 lQ
-lQ
-lQ
-lQ
-lQ
-lQ
-lQ
-lQ
-ab
+Sy
+Au
+mP
+Wg
+BR
+vi
+vN
+Og
 Sy
 Sy
 Sy
@@ -27179,15 +28448,15 @@ lQ
 lQ
 lQ
 lQ
-lQ
-lQ
-lQ
-lQ
-lQ
-lQ
-lQ
-ab
-ab
+Sy
+Sy
+dv
+dv
+dv
+dv
+Sy
+Sy
+Sy
 ab
 ab
 ab
@@ -65102,9 +66371,9 @@ tX
 OA
 JI
 ss
-GY
+Ex
 BB
-xc
+Js
 CN
 Pf
 KD
@@ -65358,17 +66627,17 @@ Ny
 Ny
 TK
 vf
-Ls
+UC
 Mg
-qM
-OH
+yQ
+CM
 Ls
 Ls
 Jj
 Ls
 GW
-Ls
-Jj
+UC
+JJ
 Ls
 HJ
 Rh
@@ -65603,30 +66872,30 @@ ay
 ay
 ay
 ay
-Hz
+TT
 Tk
 sL
 vz
-vz
-vz
-vz
+YN
+KP
+YN
 st
 vz
 vz
 vz
 Ls
-SG
-Ls
-SG
+wV
+UC
+NU
 vb
 SG
 Ls
+UC
+UC
+UC
 Ls
 Ls
-Ls
-Ls
-Ls
-Ls
+zp
 HJ
 Zh
 Es
@@ -65868,14 +67137,14 @@ UM
 TV
 TV
 TV
+TI
+Ir
+Ir
+TV
 UM
 TV
 TV
-TV
-UM
-TV
-TV
-SG
+NU
 Ls
 Cj
 wj
@@ -66132,15 +67401,15 @@ Tj
 Cm
 HJ
 XB
-JU
+vL
 TC
 Ny
 OA
 OA
 wo
 GT
-Zt
-Zt
+JF
+JF
 Zt
 Zt
 Zt
@@ -66374,23 +67643,23 @@ FV
 ay
 ay
 FV
-Dg
+VQ
 Pc
 XB
 yr
-wI
-CV
+Vh
+VB
 XB
 SA
 wI
 CV
 XB
 yr
-wI
+Vh
 CV
 XB
-JU
-TC
+vL
+rK
 Ny
 qT
 uO
@@ -66627,23 +67896,23 @@ PJ
 PJ
 PJ
 PJ
-Dg
+VQ
 PJ
-Hz
-Hz
+TT
+TT
 NN
 Qr
 XB
 qD
-wI
-wI
-XB
-qD
-wI
+Vh
 wI
 XB
 qD
 wI
+Vh
+XB
+qD
+Vh
 wI
 HJ
 QG
@@ -66879,7 +68148,7 @@ lQ
 lQ
 lQ
 PJ
-Ml
+vs
 tC
 Qr
 Qr
@@ -66891,13 +68160,13 @@ Qr
 Qr
 Qr
 XB
-Li
-wI
+Ac
+Vh
 rT
 XB
 Li
 wI
-rT
+Ur
 XB
 Li
 wI
@@ -67136,7 +68405,7 @@ lQ
 lQ
 lQ
 Pv
-Ml
+vs
 tC
 KL
 Gn
@@ -67393,7 +68662,7 @@ lQ
 lQ
 AQ
 Pv
-tC
+La
 Qr
 KL
 LT
@@ -67440,7 +68709,7 @@ Ox
 Xk
 Ny
 Bt
-IN
+Zn
 QN
 Ny
 ab
@@ -67650,7 +68919,7 @@ lQ
 lQ
 lQ
 Pv
-Qr
+TT
 El
 KL
 KL
@@ -67667,17 +68936,17 @@ yZ
 Ls
 HJ
 AB
-Ls
-Fd
+UC
+Sb
 CQ
 SG
 KL
-Ls
-Ls
+UC
+UC
 GY
 BB
 xc
-Ls
+UC
 qM
 Ls
 Ls
@@ -67907,7 +69176,7 @@ ab
 lQ
 lQ
 Qr
-Ml
+vs
 tC
 BV
 SE
@@ -67924,23 +69193,23 @@ TO
 yi
 MV
 Rm
-Cc
+EX
 QZ
 rt
 Fr
-Ls
+UC
 Ls
 Ye
 Mg
 qM
 OH
+UC
+UC
+UC
+ux
 Ls
 Ls
-Ls
-Ye
-Ls
-Ls
-Ls
+UC
 wM
 yX
 CR
@@ -68181,11 +69450,11 @@ Kt
 Fq
 MV
 qu
-UW
+FP
 qt
 Xd
 Pd
-Ls
+UC
 Xx
 Eb
 ti
@@ -68195,9 +69464,9 @@ ti
 ti
 ti
 Xs
-zr
-Ls
-Dr
+Ts
+UC
+Sq
 EZ
 yX
 Dr
@@ -68206,8 +69475,8 @@ xk
 Vw
 Ny
 OI
-Fs
-tl
+EM
+MI
 Il
 OA
 OA
@@ -68438,7 +69707,7 @@ Sj
 Sj
 HJ
 AB
-Ls
+UC
 Fd
 Lf
 Ls
@@ -68453,8 +69722,8 @@ wK
 SG
 Kk
 vw
-Ls
-Ls
+UC
+UC
 CP
 yX
 Ls
@@ -68696,10 +69965,10 @@ yi
 MV
 Rm
 Cc
-QZ
+xZ
 Hn
 SX
-HU
+uQ
 HF
 YF
 Ht
@@ -68710,11 +69979,11 @@ Vt
 Vt
 CF
 Ls
+UC
 Ls
-Ls
-wM
+Vf
 yX
-CR
+Zz
 wM
 xk
 Ls
@@ -68727,9 +69996,9 @@ vk
 Ny
 Sr
 Ls
-Dr
+UT
 Tv
-Dr
+UT
 Ny
 ab
 ab
@@ -68956,7 +70225,7 @@ UW
 qt
 BC
 GY
-BB
+vM
 xc
 YF
 To
@@ -68967,11 +70236,11 @@ Vt
 SG
 TJ
 vw
-Ls
+UC
 Dr
-YO
+Ma
 Qg
-Dr
+UT
 SH
 xk
 Vw
@@ -69224,11 +70493,11 @@ SG
 To
 Gr
 Ls
+UC
 Ls
-Ls
-CP
+qN
 yX
-Ls
+UC
 CP
 GP
 Ls
@@ -69481,9 +70750,9 @@ NX
 SG
 TF
 Ls
+UC
 Ls
-Ls
-wM
+Vf
 yX
 CR
 wM
@@ -69497,7 +70766,7 @@ Mn
 xK
 Cs
 HF
-Ls
+UC
 uv
 DC
 YC
@@ -69739,7 +71008,7 @@ SG
 TF
 Ls
 Ls
-Dr
+Sq
 SH
 yX
 Dr
@@ -69749,11 +71018,11 @@ Vw
 RI
 Rb
 JH
-JH
-Ls
+Yh
+UC
 GY
 BB
-xc
+sq
 Ls
 EN
 qr
@@ -69996,7 +71265,7 @@ vY
 PZ
 zr
 Ls
-Ls
+UC
 Ls
 NW
 Ls
@@ -70008,11 +71277,11 @@ RD
 RD
 AZ
 Gf
-Mg
-qM
+Yj
+yQ
 OH
 Hf
-Ls
+UC
 Ls
 Cu
 Ny
@@ -70222,10 +71491,10 @@ ab
 ab
 wE
 wE
-Hz
+TT
 wE
 wE
-Hz
+TT
 wE
 wE
 XB
@@ -70255,9 +71524,9 @@ Ls
 SX
 HU
 HF
-Ls
-Ls
-Ls
+UC
+UC
+UC
 Ls
 Ls
 Av
@@ -70270,7 +71539,7 @@ Sr
 Sr
 RL
 Ba
-Ls
+UC
 SB
 Ny
 ab
@@ -70510,9 +71779,9 @@ zh
 zZ
 ri
 GY
-BB
-xc
-Ls
+vM
+sq
+UC
 tj
 Ls
 tj
@@ -70767,7 +72036,7 @@ Wo
 Un
 ri
 Mg
-qM
+yQ
 OH
 JC
 Hi
@@ -70779,14 +72048,14 @@ At
 Oa
 OA
 xQ
-wI
-wI
-De
+Vh
+Vh
+WW
 De
 Tj
 wI
-wI
-sh
+Vh
+NI
 sh
 Ny
 ab
@@ -71036,7 +72305,7 @@ Zs
 Oa
 OA
 wx
-wI
+Vh
 vb
 Ys
 wI
@@ -71280,7 +72549,7 @@ QH
 HG
 Xg
 Ny
-FK
+Kn
 Ls
 tp
 Ny
@@ -71537,8 +72806,8 @@ Dj
 wk
 wI
 vo
-xc
-Ls
+sq
+UC
 SG
 Kp
 Oa
@@ -71559,7 +72828,7 @@ KL
 qB
 Oq
 Oq
-KL
+DF
 ay
 ay
 ay
@@ -71788,14 +73057,14 @@ Ny
 wg
 Vh
 wI
-wI
+Vh
 wI
 Vh
 wI
 wI
 vo
 xc
-Ls
+UC
 GY
 Ls
 Oa
@@ -71816,7 +73085,7 @@ BG
 AV
 Oq
 Oq
-qB
+Of
 ay
 ay
 ay
@@ -72070,8 +73339,8 @@ OA
 OA
 OA
 CG
-YT
-wI
+CS
+Vh
 TP
 OA
 lQ
@@ -72328,7 +73597,7 @@ Xq
 Tj
 Xo
 wI
-wI
+Vh
 jZ
 OA
 ab
@@ -72584,8 +73853,8 @@ Oa
 On
 Tj
 wI
-wI
-wI
+Vh
+Vh
 zz
 Ny
 ab
@@ -72822,9 +74091,9 @@ Ny
 Ny
 Ny
 OA
-FK
-Ls
-tp
+Kn
+UC
+IR
 OA
 OA
 OA
@@ -73081,7 +74350,7 @@ uW
 OA
 FK
 Ls
-tp
+IR
 Ny
 Tn
 WM
@@ -73331,14 +74600,14 @@ HV
 SG
 IX
 Ym
+Vh
 wI
-wI
-wI
-wI
+Vh
+Vh
 rg
 xc
-Ls
-tp
+UC
+DU
 Ny
 Pu
 WM
@@ -73588,13 +74857,13 @@ RE
 Pw
 OA
 vh
-wI
+Vh
 Mv
 Ny
 MU
 OA
 FK
-Ls
+UC
 tp
 Ny
 xU
@@ -73602,7 +74871,7 @@ WM
 LW
 OA
 Cw
-Ls
+UC
 Ny
 Ny
 Ny
@@ -73859,7 +75128,7 @@ OA
 OA
 OA
 DL
-Ls
+UC
 Ny
 YX
 Fw
@@ -74108,7 +75377,7 @@ Ny
 Ny
 Ny
 JN
-Ls
+UC
 tp
 OA
 Yz
@@ -74116,7 +75385,7 @@ WM
 Br
 OA
 Ul
-Ls
+UC
 Ny
 Dm
 rb
@@ -74365,7 +75634,7 @@ Sd
 Ql
 Ny
 FK
-Ls
+UC
 tp
 Ny
 HQ
@@ -74610,20 +75879,20 @@ Zu
 Ka
 OA
 ro
-wY
-Nq
+Vr
+Gk
 yU
 Nq
 wY
 Nc
 XG
-Nq
-wY
+Gk
+Vr
 wI
 Tj
 FK
-Ls
-tp
+UC
+DU
 Ny
 xU
 WM
@@ -74864,29 +76133,29 @@ lQ
 lQ
 Yg
 Ck
-Ka
+Mq
 DY
 OY
-wI
-rR
+Vh
+ZD
 wu
 rR
-wI
+Vh
 rR
-wu
-rR
+ZJ
+ZD
 wI
-wY
+Vr
 Tj
 FK
 Ls
-tp
+DU
 Ny
 Ny
 Ny
 Ny
 OA
-Ls
+UC
 wt
 OA
 UL
@@ -75121,30 +76390,30 @@ Ui
 jB
 Yg
 WE
-Ka
+Mq
 si
-ZP
+UX
 wY
 Ld
 um
 Ld
-wY
+Vr
 Ld
 Qn
 Ld
 wY
-wI
+Vh
 Si
 xc
 Ls
 GY
 vo
+UC
+UC
+UC
 Ls
 Ls
-Ls
-Ls
-Ls
-Ls
+UC
 OA
 vm
 rb
@@ -75378,28 +76647,28 @@ ay
 lQ
 Yg
 uh
-Ka
+Mq
 tB
-OY
+LC
 wI
 xe
 wu
 rR
-wI
+Vh
 rR
 wu
 rR
-wI
+Vh
 wY
 yh
 xc
-Ls
-GY
+UC
+Ex
 vo
-Ls
+UC
 Yd
 TV
-TV
+Ir
 TV
 Hh
 OA
@@ -75635,7 +76904,7 @@ ay
 Cg
 Yg
 yk
-Ka
+Mq
 Gi
 ZP
 wY
@@ -75643,10 +76912,10 @@ Mk
 um
 Mk
 sG
-Mk
+RR
 yU
 Mk
-wY
+Vr
 wI
 Tj
 FK
@@ -75895,14 +77164,14 @@ Zx
 Ka
 si
 OY
-wI
+Vh
 wY
+Vh
+Vr
+Vh
+Vr
 wI
-wY
-wI
-wY
-wI
-wY
+Vr
 wI
 wY
 Tj
@@ -76152,7 +77421,7 @@ Pn
 Ka
 Jx
 ZP
-wY
+Vr
 wI
 Mx
 wy
@@ -76435,7 +77704,7 @@ Jr
 Jr
 Jr
 Jr
-Jr
+xT
 Jr
 xT
 OA
@@ -77697,7 +78966,7 @@ ay
 ay
 Hz
 tZ
-Ej
+NT
 KG
 tC
 Hz

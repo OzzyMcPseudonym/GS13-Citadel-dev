@@ -1,5 +1,8 @@
 GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/maintenance, /area/security/prison, /area/holodeck, /area/commons/vacant_room/office, /area/space, /area/ruin, /area/lavaland, /area/awaymission, /area/centcom, /area/fatlab))
 
+/mob/living
+	var/burpslurring = 0 //GS13 - necessary due to "say" being defined by mob/living
+
 /mob/living/carbon
 	//Due to the changes needed to create the system to hide fatness, here's some notes:
 	// -If you are making a mob simply gain or lose weight, use adjust_fatness. Try to not touch the variables directly unless you know 'em well
@@ -21,10 +24,7 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 	var/doorstuck = 0
 
 	var/fullness = FULLNESS_LEVEL_HALF_FULL
-	var/fullness_reduction_timer = 0
-	var/burpslurring = 0
-
-	var/fullness_reducion_timer = 0 // When was the last time they emoted to reduce their fullness
+	var/fullness_reduction_timer = 0 // When was the last time they emoted to reduce their fullness
 
 /**
 * Adjusts the fatness level of the parent mob.
@@ -95,6 +95,9 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 		return FALSE
 
 	switch(type_of_fattening)
+		if(FATTENING_TYPE_ALMIGHTY)
+			return TRUE
+
 		if(FATTENING_TYPE_ITEM)
 			if(!client?.prefs?.weight_gain_items)
 				return FALSE
@@ -121,6 +124,10 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 
 		if(FATTENING_TYPE_NANITES)
 			if(!client?.prefs?.weight_gain_nanites)
+				return FALSE
+
+		if(FATTENING_TYPE_ATMOS)
+			if(!client?.prefs?.weight_gain_atmos)
 				return FALSE
 
 		if(FATTENING_TYPE_WEIGHT_LOSS)
@@ -226,7 +233,7 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 	if(fatness_amount < FATNESS_LEVEL_MORBIDLY_OBESE)
 		return "Obese"
 	if(fatness_amount < FATNESS_LEVEL_EXTREMELY_OBESE)
-		return "Morbidly Obese"
+		return "Very Obese"
 	if(fatness_amount < FATNESS_LEVEL_BARELYMOBILE)
 		return "Extremely Obese"
 	if(fatness_amount < FATNESS_LEVEL_IMMOBILE)
@@ -269,4 +276,12 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 /mob/living/carbon/proc/applyFatnessDamage(amount)
 	var/fat_to_add = ((amount * CONFIG_GET(number/damage_multiplier)) * FAT_DAMAGE_TO_FATNESS)
 	adjust_fatness(fat_to_add, FATTENING_TYPE_WEAPON)
+	return fat_to_add
+
+/mob/living/carbon/proc/applyPermaFatnessDamage(amount)
+	if(!client?.prefs?.weight_gain_permanent) // If we cant apply permafat, apply regular fat
+		return applyFatnessDamage(amount)
+
+	var/fat_to_add = ((amount * CONFIG_GET(number/damage_multiplier)) * PERMA_FAT_DAMAGE_TO_FATNESS)
+	adjust_perma(fat_to_add, FATTENING_TYPE_WEAPON)
 	return fat_to_add

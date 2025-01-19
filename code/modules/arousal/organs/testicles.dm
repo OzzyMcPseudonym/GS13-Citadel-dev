@@ -6,6 +6,7 @@
 	zone = BODY_ZONE_PRECISE_GROIN
 	slot = ORGAN_SLOT_TESTICLES
 	size = BALLS_SIZE_MIN
+	fluid_max_volume = 10
 	arousal_verb = "Your balls ache a little"
 	unarousal_verb = "Your balls finally stop aching, again"
 	linked_organ_slot = ORGAN_SLOT_PENIS
@@ -63,6 +64,7 @@
 	else
 		color = "#[D.features["balls_color"]]"
 	shape = D.features["balls_shape"]
+	fluid_id = D.features["balls_fluid"]
 	fluid_rate = D.features["balls_cum_rate"]
 	fluid_mult = D.features["balls_cum_mult"]
 	fluid_efficiency = D.features["balls_efficiency"]

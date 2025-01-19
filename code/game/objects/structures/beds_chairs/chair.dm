@@ -77,7 +77,12 @@
 	qdel(src)
 
 /obj/structure/chair/attackby(obj/item/W, mob/user, params)
-	if(W.tool_behaviour == TOOL_WRENCH && !(flags_1 & NODECONSTRUCT_1))
+	// GS13 EDIT - replaced wrench check with a check based on material and tool - chairs made from any material other
+	// than cloth will function the same as before, but chairs made from cloth will be destructible using a wirecutter
+	var/wrench_deconstruct = W.tool_behaviour == TOOL_WRENCH && buildstacktype != /obj/item/stack/sheet/cloth
+	var/wirecutter_deconstruct = W.tool_behaviour == TOOL_WIRECUTTER && buildstacktype == /obj/item/stack/sheet/cloth
+	if((wrench_deconstruct || wirecutter_deconstruct) && !(flags_1 & NODECONSTRUCT_1))
+	// GS13 END EDIT
 		W.play_tool_sound(src)
 		deconstruct()
 	else if(istype(W, /obj/item/assembly/shock_kit))
@@ -160,6 +165,7 @@
 	buildstacktype = null //Custom mats handle this
 
 /obj/structure/chair/wood
+	icon = 'GainStation13/icons/obj/chairs.dmi' //GS13 Edit: Our sprites
 	icon_state = "wooden_chair"
 	name = "wooden chair"
 	desc = "Old is never too old to not be in fashion."
@@ -182,6 +188,7 @@
 /obj/structure/chair/comfy
 	name = "comfy chair"
 	desc = "It looks comfy."
+	icon = 'GainStation13/icons/obj/chairs.dmi' //GS13 - better sprites
 	icon_state = "comfychair"
 	color = rgb(255,255,255)
 	resistance_flags = FLAMMABLE
@@ -196,7 +203,7 @@
 	return ..()
 
 /obj/structure/chair/comfy/proc/GetArmrest()
-	return mutable_appearance('icons/obj/chairs.dmi', "comfychair_armrest")
+	return mutable_appearance('GainStation13/icons/obj/chairs.dmi', "comfychair_armrest") //GS13 - better comfy chairs
 
 /obj/structure/chair/comfy/Destroy()
 	QDEL_NULL(armrest)
@@ -217,25 +224,26 @@
 	update_armrest()
 
 /obj/structure/chair/comfy/brown
-	color = rgb(255,113,0)
+	color = rgb(197, 130, 76)
 
 /obj/structure/chair/comfy/beige
-	color = rgb(255,253,195)
+	color = rgb(193, 191, 153)
 
 /obj/structure/chair/comfy/teal
-	color = rgb(0,255,255)
+	color = rgb(71, 190, 190)
 
 /obj/structure/chair/comfy/black
 	color = rgb(167,164,153)
 
-/obj/structure/chair/comfy/green
-	color = rgb(81,173,106)
-
 /obj/structure/chair/comfy/lime
-	color = rgb(255,251,0)
+	color = rgb(194, 192, 78)
 
 /obj/structure/chair/comfy/purple
-	color = rgb(255,50,230)
+	color = rgb(173, 85, 163)
+
+/obj/structure/chair/comfy/green
+	color = rgb(110, 148, 99)
+
 
 /obj/structure/chair/comfy/plywood
 	name = "plywood chair"
@@ -539,6 +547,7 @@
 
 /obj/item/chair/wood
 	name = "wooden chair"
+	icon = 'GainStation13/icons/obj/chairs.dmi' //GS13 Edit: Our sprites
 	icon_state = "wooden_chair_toppled"
 	item_state = "woodenchair"
 	resistance_flags = FLAMMABLE
