@@ -2,8 +2,8 @@
 	name = "Clogged Vents: Normal"
 	typepath = /datum/round_event/vent_clog
 	weight = 10
-	max_occurrences = 3
-	min_players = 10
+	max_occurrences = 2 //GS13 - pain in the ass, occurences nerfed until a less disruptive variant is made
+	min_players = 16 //GS13 - pain in the ass, occurences nerfed until a less disruptive variant is made
 	category = EVENT_CATEGORY_HEALTH
 	description = "All the scrubbers onstation spit random chemicals in smoke form."
 
@@ -15,19 +15,23 @@
 	var/list/vents  = list()
 	var/randomProbability = 0
 	var/reagentsAmount = 100
-	var/list/saferChems = list( //GS13 - removed some of those chems, just a couple particularly annoying ones
+	var/list/saferChems = list(
 		/datum/reagent/water,
 		/datum/reagent/carbon,
+		// /datum/reagent/consumable/flour, //GS13 remove: there's already few too many messy reagents there
 		/datum/reagent/space_cleaner,
 		/datum/reagent/consumable/nutriment,
 		/datum/reagent/consumable/condensedcapsaicin,
 		/datum/reagent/drug/mushroomhallucinogen,
 		/datum/reagent/lube,
-		/datum/reagent/glitter/pink,
+		// /datum/reagent/glitter/pink, //GS13 tweak: there's already few too many messy reagents there
+		/datum/reagent/glitter/pink_subtle, //GS13 Add: Add our subtle variants of glitter.
 		/datum/reagent/cryptobiolin,
+		//datum/reagent/toxin/plantbgone, //GS13 Remove: Annoying Reagent
 		/datum/reagent/blood,
 		/datum/reagent/medicine/charcoal,
 		/datum/reagent/drug/space_drugs,
+		/datum/reagent/medicine/morphine,
 		/datum/reagent/water/holywater,
 		/datum/reagent/consumable/ethanol,
 		/datum/reagent/consumable/hot_coco,
@@ -38,7 +42,7 @@
 		/datum/reagent/pax,
 		/datum/reagent/consumable/laughter,
 		/datum/reagent/concentrated_barbers_aid,
-		/datum/reagent/baldium,
+		// /datum/reagent/baldium, //gs13 remove: just cruel
 		/datum/reagent/colorful_reagent,
 		/datum/reagent/peaceborg_confuse,
 		/datum/reagent/peaceborg_tire,
@@ -47,6 +51,7 @@
 		/datum/reagent/hair_dye,
 		/datum/reagent/consumable/sugar,
 		/datum/reagent/glitter/white,
+		/datum/reagent/glitter/white_subtle, //GS13 ADD: Add our subtle variants of glitter. ...Why is this separate from the other glitter, anyhow? Blue glitter's also missing, so I wont add it.
 		/datum/reagent/growthserum,
 		/datum/reagent/consumable/cornoil,
 		/datum/reagent/uranium,
@@ -62,7 +67,7 @@
 	priority_announce("The scrubbers network is experiencing a backpressure surge. Some ejection of contents may occur.", "Atmospherics alert", has_important_message = TRUE)
 
 /datum/round_event/vent_clog/setup()
-	end_when = rand(120, 180)
+	end_when = rand(60, 120) //GS13 - length nerf
 	for(var/obj/machinery/atmospherics/components/unary/vent_scrubber/temp_vent in GLOB.machines)
 		var/turf/T = get_turf(temp_vent)
 		var/area/A = T.loc
@@ -97,7 +102,7 @@
 		R.add_reagent(pick(saferChems), reagentsAmount)
 
 	var/datum/effect_system/smoke_spread/chem/smoke_machine/C = new
-	C.set_up(R,16,1,T)
+	C.set_up(R,5,1,T) //GS13 - tweaked size of clouds, from 16 to 5
 	C.start()
 	playsound(T, 'sound/effects/smoke.ogg', 50, 1, -3)
 
@@ -105,20 +110,20 @@
 	name = "Clogged Vents: Threatening"
 	typepath = /datum/round_event/vent_clog/threatening
 	weight = 4
-	min_players = 18
+	min_players = 30 //gs13 tweak
 	max_occurrences = 1
 	earliest_start = 35 MINUTES
 	description = "Extra dangerous chemicals come out of the scrubbers."
 
 /datum/round_event/vent_clog/threatening
 	randomProbability = 10
-	reagentsAmount = 100
+	reagentsAmount = 200
 
 /datum/round_event_control/vent_clog/catastrophic
 	name = "Clogged Vents: Catastrophic"
 	typepath = /datum/round_event/vent_clog/catastrophic
 	weight = 2
-	min_players = 25
+	min_players = 35 //gs13 tweak
 	max_occurrences = 1
 	earliest_start = 45 MINUTES
 	description = "EXTREMELY dangerous chemicals come out of the scrubbers."

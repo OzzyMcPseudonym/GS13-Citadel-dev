@@ -32,6 +32,7 @@
 	var/obj/item/equipment 		//for fun stuff that goes on the gentials/maybe rings down the line
 	var/dontlist				= FALSE
 	var/nochange				= FALSE //stops people changing visablity.
+	var/starting_size //GS13 EDIT
 
 
 /obj/item/organ/genital/Initialize(mapload, do_update = TRUE)
@@ -71,6 +72,8 @@
 	if(genital_flags & UPDATE_OWNER_APPEARANCE && owner && ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		H.update_genitals()
+		if(owner)//GS13: rebuild overlays on genitals appearance update, for modular clothes
+			owner.update_inv_w_uniform()
 	if(linked_organ_slot || (linked_organ && !owner))
 		update_link()
 
@@ -356,8 +359,23 @@
 					if("belly_color")
 						genital_overlay.color = "#[dna.features["belly_color"]]"
 
-			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[aroused_state]_[layertext]"
-
+			//GS13 -	Because each genital's file has different naming schemes for their icon_states,
+			//			I've made it so each type is checked and the icon_state built based on which genital it is
+			switch(G.slot)
+				if("belly")
+					genital_overlay.icon = G.icon
+					genital_overlay.icon_state = "[G.icon_state]_[aroused_state]_[layertext]"
+				if("breasts")
+					genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "-s" : ""]_[aroused_state]_[layertext]"
+				if("penis")
+					genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size]_[aroused_state]_[layertext]"
+				if("testicles")
+					genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size]_[aroused_state]_[layertext]"
+				if("vagina")
+					genital_overlay.icon_state = "[G.slot][(dna.species.use_skintones && !dna.skin_tone_override) ? "-s" : ""]_[S.icon_state]_[size]_[aroused_state]_[layertext]"
+				if("butt")
+					genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[aroused_state]_[layertext]"
+			//GS13 END
 			if(layers_num[layer] == GENITALS_FRONT_LAYER && G.genital_flags & GENITAL_THROUGH_CLOTHES)
 				genital_overlay.layer = -GENITALS_EXPOSED_LAYER
 				LAZYADD(fully_exposed, genital_overlay)

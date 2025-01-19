@@ -15,6 +15,8 @@
 	var/weight_gain_viruses = FALSE
 	///Weight gain from nanites
 	var/weight_gain_nanites = FALSE
+	//Weight gain from atmos gasses
+	var/weight_gain_atmos = FALSE
 	///Blueberry Inflation
 	var/blueberry_inflation = FALSE
 	///Extreme weight gain
@@ -31,6 +33,8 @@
 	var/fatness_vulnerable = FALSE
 	/// Similar to fatness_vulnerable, but with more extreme effects such as transformation/hypno.
 	var/extreme_fatness_vulnerable = FALSE
+	/// Can the person be transformed into an object?
+	var/object_tf
 
 	// Helplessness, a set of prefs that make things extra tough at higher weights. If set to FALSE, they won't do anything.
 	///What fatness level disables movement?
@@ -57,6 +61,8 @@
 
 	///Does the person wish to be involved with non-con weight gain events?
 	var/noncon_weight_gain = FALSE
+	///Does the person want to get into confrontation?
+	var/trouble_seeker = FALSE
 
 	//Does the person wish to be fed from bots?
 	var/bot_feeding = FALSE
